@@ -1,0 +1,143 @@
+.pagina {
+    border-left: solid 20px rgb(182, 182, 182);
+    border-right: solid 20px rgb(182, 182, 182);
+}
+
+
+.navegador {
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+
+a {
+    color: rgb(248, 215, 187);
+}
+
+
+
+d {
+
+    font-size-adjust: calc(50%);
+    font-size: 30px;
+    position: absolute;
+    transform: transaltex(-50%) translaty(50%)
+}
+
+
+.experiencia {
+    background-color: rgb(255, 228, 188);
+    padding: 0px;
+    margin: 0px 0 0 -0px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+
+
+}
+
+.modal-footer {
+    background-color: rgb(226, 214, 171);
+    backdrop-filter: blur(20px);
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+}
+
+
+
+.agregar {
+    background-color: rgb(250, 246, 232);
+
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+
+}
+
+
+
+.parrafo {
+    color: rgb(106, 110, 117);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card-body {
+    text-align: center;
+}
+
+
+
+
+.u {
+    background-color: rgb(255, 228, 188);
+    border-bottom: 3px solid rgb(211, 206, 206);
+    padding-top: 2px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.h2 {
+    background-color: blueviolet;
+}
+
+.estilos {
+    background-color: rgb(31, 30, 30);
+    padding: 20px;
+    color: white;
+}
+
+
+.btn btn-primary {
+    padding: 50px;
+}
+
+
+
+/* linkiando  la fuenta */
+@font-face {
+    font-family: FuenteMultimedia;
+    src: url("../src/assets/fuentes/multimedia/FjallaOne-Regular.ttf");
+
+}
+
+/*codigo de fuente tipografica
+ Fo*/
+
+.multimedia {
+    font-family: FuenteMultimedia;
+    font-weight: 600;
+
+}
+
+@font-face {
+    font-family: FuenteWebFont;
+    src: url("../src/assets/fuentes/web/Jost-VariableFont_wght.ttf");
+}
+
+.web {
+    font-family: FuenteWebFont;
+    font-weight: 900;
+}
+
+/*estilo de fondo de tarjeta experiencia laboral*/
+
+
+.figure {
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 100px;
+    border: solid 5px rgb(130, 130, 129);
+    backdrop-filter: blur(50px);
+}
+
+/*BOTONES Y ESTILOS*/
+/* centrado 
+ display: flex;
+ flex-direcction: column;  (centrado)
+ justify-content: center;
+ align-itens: center;
+ min-h
+*/
+video {
+
+    width: 80%;
+    margin: auto;
+    display: block;
+}

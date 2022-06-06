@@ -1,0 +1,37 @@
+
+
+.progress {
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.8);
+
+}
+
+.hab {
+    background: rgb(199, 233, 190);
+    border: 500px;
+
+    color: rgb(0, 0, 0);
+}
+
+.habilidades {
+    margin-left: 50px;
+    margin-right: 50px;
+
+
+}
+
+.barra {
+    background-color: rgb(230, 210, 177);
+    border-radius: 20px;
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.8);
+}
+
+.h5 {
+    margin-right: 90%;
+
+    background-color: rgb(230, 210, 177);
+    border-radius: 90px 20px 50px 50px;
+    text-align: center;
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.8);
+    background: rgb(199, 233, 190);
+
+}

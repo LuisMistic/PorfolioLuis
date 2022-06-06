@@ -1,0 +1,13 @@
+* {
+    align-items: center;
+    text-align: center;
+    background-color: rgba(10, 10, 10, 0.808);
+    color: rgb(250, 237, 215);
+}
+
+
+.form-label {
+    align-items: center;
+    color: 1px rgb(250, 237, 215);
+
+}
