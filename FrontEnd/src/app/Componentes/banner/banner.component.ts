@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Persona } from 'src/app/modelo/Persona';
-import { ServiceService } from 'src/app/Servicios/service.service';
+import { Persona } from 'src/app/modelo/Persona.model';
+
 
 @Component({
   selector: 'app-banner',

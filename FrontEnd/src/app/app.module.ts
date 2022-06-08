@@ -12,6 +12,9 @@ import { AudiovisualesComponent } from './Componentes/audiovisuales/audiovisuale
 import { EducacionComponent } from './Componentes/educacion/educacion.component';
 import { HabilidadesComponent } from './Componentes/habilidades/habilidades.component';
 import { ContactoComponent } from './Componentes/contacto/contacto.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './Componentes/home/home.component';
+import { LoginComponent } from './Componentes/login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +26,14 @@ import { ContactoComponent } from './Componentes/contacto/contacto.component';
     AudiovisualesComponent,
     EducacionComponent,
     HabilidadesComponent,
-    ContactoComponent
+    ContactoComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]
