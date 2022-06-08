@@ -9,11 +9,14 @@ import { ServiceService } from 'src/app/Servicios/service.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  persona: Persona = new Persona ("","","");
+  //persona: Persona = new Persona ("","","");
+  personas:Persona []=[];
   constructor(public personaService: ServiceService) {}
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => {this.persona = data})
+    this.personaService.getPersona().subscribe(data => {this.personas = data 
+    console.log(data);})
+    
   }
 
 }

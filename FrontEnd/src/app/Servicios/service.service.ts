@@ -10,12 +10,12 @@ import { Persona } from '../modelo/Persona.model';
 })
 export class ServiceService {
 
-   URL='http://localhost:8080/personas/';
+   URL='http://localhost:8080/personas';
 
      constructor(private http: HttpClient) { }
      
-     public getPersona(): Observable<Persona>{
-     return this.http.get<Persona>(this.URL+'/traer/perfil');
+     public getPersona(){
+     return this.http.get<Persona[]>(this.URL+'/traer');
 
 
    }
