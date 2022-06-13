@@ -7,23 +7,12 @@
 
 
 
-.nav-item {
 
-    background-color: rgba(39, 35, 35, 0.808);
+
+.d-flex {
+    align-items: center;
+    justify-content: center;
 }
-
-
-ul {
-    background-color: rgb(31, 29, 29);
-    padding-top: px;
-
-    text-align: center;
-}
-
-.buton {
-    text-align: r;
-}
-
 
 /*desoarecer menu
 @media (width:500px) {
