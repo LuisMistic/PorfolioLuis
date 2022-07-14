@@ -18,6 +18,10 @@ export class ServiceService {
 
 
    }
+   createPersona(persona:Persona){
+return this.http.post<Persona>(this.URL+'crear/',persona)
+
+   }
   }
    
   

@@ -26,11 +26,5 @@ public class Proyecto {
     
     @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
-    private String apellido;
-    
-    @NotNull
-    @Size(min = 1, max = 50, message = "no cumple con la longitud")
-    private String img;
-    
-    
+    private String video;    
 }

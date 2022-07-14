@@ -15,6 +15,9 @@ import { ContactoComponent } from './Componentes/contacto/contacto.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './Componentes/home/home.component';
 import { LoginComponent } from './Componentes/login/login.component';
+import { ExperienciaAgregarComponent } from './Componentes/experiencia-agregar/experiencia-agregar.component';
+import { FormsModule } from '@angular/forms';
+import { ExperienciaService } from './Servicios/experiencia.service';
 
 
 @NgModule({
@@ -29,14 +32,16 @@ import { LoginComponent } from './Componentes/login/login.component';
     HabilidadesComponent,
     ContactoComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ExperienciaAgregarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
-  providers: [ServiceService],
+  providers: [ServiceService,ExperienciaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

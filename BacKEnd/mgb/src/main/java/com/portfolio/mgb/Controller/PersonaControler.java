@@ -1,4 +1,3 @@
-
 package com.portfolio.mgb.Controller;
 
 import com.portfolio.mgb.Entity.Persona;
@@ -16,40 +15,35 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200")
 public class PersonaControler {
-    @Autowired IPersonaService ipersonaService;
-    
+
+    @Autowired
+    IPersonaService ipersonaService;
+
     @GetMapping("personas/traer")
-    public List <Persona> getPersona(){
+    public List<Persona> getPersona() {
         return ipersonaService.getPersona();
-            
+
     }
-    
-    @PostMapping ("/personas/crear")
+
+    @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona persona) {
-    ipersonaService.savePersona(persona);
-    return "la Persona fue creada corretamente";
+        ipersonaService.savePersona(persona);
+        return "la Persona fue creada corretamente";
     }
-    
+
     @DeleteMapping("/personas/borrar/{id})")
-    public String deletePersona(@PathVariable Long id){
-    ipersonaService.deletePersona(id);
-    return "La persona fue eliminada correctamente";
+    public String deletePersona(@PathVariable Long id) {
+        ipersonaService.deletePersona(id);
+        return "La persona fue eliminada correctamente";
     }
-    @PutMapping ("/personas/editar/{id}")
-    public Persona editPersona(@PathVariable Long id,
-          @RequestParam("nombre") String nuevoNombre,  
-          @RequestParam("apellido") String nuevoApellido,
-          @RequestParam("nombre") String nuevoImg){
-        
-        Persona persona = ipersonaService.findPersona(id);
-        persona.setNombre(nuevoNombre);
-        persona.setApellido(nuevoApellido);
-        persona.setImg(nuevoImg);
-        
+
+    @PutMapping("/personas/editar/{id}")
+    public Persona editPersona(@PathVariable("id") long id, @RequestBody Persona persona) {
+        persona.setId(id);
         ipersonaService.savePersona(persona);
         return persona;
     }
-    
+
 }

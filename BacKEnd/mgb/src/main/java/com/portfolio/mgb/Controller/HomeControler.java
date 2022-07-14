@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -42,19 +41,12 @@ public class HomeControler {
     ihomeService.deleteHome(id);
     return "La persona fue eliminada correctamente";
     }
-    @PutMapping ("/home/editar/{id}")
-    public Home editHome(@PathVariable Long id,
-          @RequestParam("nombre") String nuevoNombre,  
-          @RequestParam("apellido") String nuevoApellido,
-          @RequestParam("nombre") String nuevoImg){
-        
-        Home home = ihomeService.findHome(id);
-        home.setNombre(nuevoNombre);
-        home.setApellido(nuevoApellido);
-        home.setImg(nuevoImg);
-        
+     @PutMapping("/home/editar/{id}")
+    public Home editHome(@PathVariable("id") long id, @RequestBody Home home) {
+        home.setId(id);
         ihomeService.saveHome(home);
         return home;
     }
+
     
 }

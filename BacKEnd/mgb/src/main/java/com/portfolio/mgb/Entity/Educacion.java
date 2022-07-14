@@ -10,13 +10,9 @@ import javax.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Getter @Setter
 @Entity
-
-
-public class Home {
-
+public class Educacion {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,8 +22,12 @@ public class Home {
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String nombre;
     
-  
+    
     @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
-    private String img;
+    private String descripcion;
+    
+    @NotNull
+    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+    private String fecha;
 }

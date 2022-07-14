@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Persona } from 'src/app/modelo/Persona.model';
+import { Router } from '@angular/router';
+import { Experiencia } from 'src/app/modelo/Experiencia.model';
+import { ExperienciaService } from 'src/app/Servicios/experiencia.service';
 
-import { ServiceService } from 'src/app/Servicios/service.service';
+
 
 @Component({
   selector: 'app-experiencia',
@@ -10,13 +12,16 @@ import { ServiceService } from 'src/app/Servicios/service.service';
 })
 export class ExperienciaComponent implements OnInit {
   //persona: Persona = new Persona ("","","");
-  personas:Persona []=[];
-  constructor(public personaService: ServiceService) {}
+  experiencias:Experiencia []=[];
+  constructor(public experienciaService: ExperienciaService, private route: Router) {}
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => {this.personas = data 
+    this.experienciaService.getExperiencia().subscribe(data => {this.experiencias = data 
     console.log(data);})
     
+  }
+  ExperienciaAgregar(){
+    this.route.navigate(['experienciaAgregar'])
   }
 
 }

@@ -1,8 +1,8 @@
 
 package com.portfolio.mgb.Controller;
 
-import com.portfolio.mgb.Entity.Proyecto;
-import com.portfolio.mgb.Interface.IProyectoService;
+import com.portfolio.mgb.Entity.Educacion;
+import com.portfolio.mgb.Interface.IEducacionService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,31 +18,32 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin(origins="http://localhost:4200")
-public class ProyectoControler {
+public class EducacionControler {
     
-     @Autowired IProyectoService iproyectoService;
+    @Autowired IEducacionService ieducacionService;
     
-    @GetMapping("proyecto/traer")
-    public List <Proyecto> getProyecto(){
-        return iproyectoService.getProyecto();
+    @GetMapping("educacion/traer")
+    public List <Educacion> getEducacion(){
+        return ieducacionService.getEducacion();
             
     }
     
-    @PostMapping ("/proyecto/crear")
-    public String createProyecto(@RequestBody Proyecto proyecto) {
-    iproyectoService.saveProyecto(proyecto);
+    @PostMapping ("/educacion/crear")
+    public String createEducacion(@RequestBody Educacion educacion) {
+    ieducacionService.saveEducacion(educacion);
     return "la Persona fue creada corretamente";
     }
     
-    @DeleteMapping("/proyecto/borrar/{id})")
-    public String deleteProyecto(@PathVariable Long id){
-    iproyectoService.deleteProyecto(id);
+    @DeleteMapping("/educacion/borrar/{id})")
+    public String deleteEducacion(@PathVariable Long id){
+    ieducacionService.deleteEducacion(id);
     return "La persona fue eliminada correctamente";
     }
-       @PutMapping("/proyecto/editar/{id}")
-    public Proyecto editProyecto(@PathVariable("id") long id, @RequestBody Proyecto proyecto) {
-        proyecto.setId(id);
-        iproyectoService.saveProyecto(proyecto);
-        return proyecto;
+   @PutMapping("/educacion/editar/{id}")
+    public Educacion editEducacion(@PathVariable("id") long id, @RequestBody Educacion educacion) {
+        educacion.setId(id);
+        ieducacionService.saveEducacion(educacion);
+        return educacion;
     }
+    
 }
