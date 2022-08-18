@@ -7,16 +7,16 @@
             <h1> EXPERIENCIA LABORAL </h1>
             
             
-                
-            </div>
-            </div>
-             <div class="row">
+            
+        </div>
+    </div>
+    <div class="row">
                 <div class="col-12 ">
                     
+                    <button (click)="ExperienciaAgregar()"class="btn" style="float: center ;"><i class="fa fa-id-badge"
+                            aria-hidden="true"></i></button>
                         
-                    <button class="btn" style="float: center ;"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                    <button class="btn" style="float: center ;"><i class="fa fa-id-badge" aria-hidden="true"></i></button>
-                    <button class="btn" style="float: center ;"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                    
                 </div>
             </div> 
         
@@ -36,7 +36,7 @@
                     <div *ngFor="let experiencia of experiencias"  class="contsaButton"> 
                         
                         <div class="centrado" >
-                            <h2 id="multimedia">{{experiencia.nombre}}   {{experiencia.descripcion}}</h2>
+                            {{experiencia.id}}<h2 id="multimedia"> {{experiencia.nombre}}   {{experiencia.descripcion}}</h2>
                             
                             <img src="../../../assets/iconos/Recurso 5.png" alt="">
                             <img src="../../../assets/iconos/Recurso 3.png" alt="">
@@ -46,11 +46,9 @@
                         </div>
                         <div class="botonera">
                             
-                            <button (click)="ExperienciaAgregar()"class="btn" style="float: center ;"><i class="fa fa-id-badge"
-                                    aria-hidden="true"></i></button>
-                             <button  class="btn" style="float: center ;">
+                             <button (click)="Editar(experiencia)" class="btn" style="float: center ;">
                                 <i class="fa fa-pencil" aria-hidden="true"></i></button>
-                            <button class="btn" style="float: center ;"><i class="fa fa-trash-o"
+                            <button (click)="Borrar(experiencia)"class="btn" style="float: center ;"><i class="fa fa-trash-o"
                                     aria-hidden="true"></i></button>
                         </div>
                     </div>

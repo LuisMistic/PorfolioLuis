@@ -7,7 +7,7 @@ export class Experiencia {
     constructor(id:number,nombre:String, descripcion:String) {
         this.id = id;
         this.nombre = nombre;
-        this.descripcion = descripcion ;
+        this.descripcion = descripcion;
         
         
     }

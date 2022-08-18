@@ -8,18 +8,29 @@ import { Experiencia } from '../modelo/Experiencia.model';
 export class ExperienciaService {
 
  
-URL='http://localhost:8080/experiencia/';
+URL='http://localhost:8080/experiencia';
 
      constructor(private http: HttpClient) { }
      
      public getExperiencia(){
-     return this.http.get<Experiencia[]>(this.URL+'traer');
+     return this.http.get<Experiencia[]>(this.URL+'/traer');
 
 
    }
    createExperiencia(experiencia:Experiencia){
-return this.http.post<Experiencia>(this.URL+'crear/',experiencia);
+return this.http.post<Experiencia>(this.URL+'/crear/',experiencia);
 
    }
 
+   getExperienciaId(id:number){
+    return this.http.get<Experiencia>(this.URL+"/"+id);
+
+   }
+   updateExperiencia(experiencia:Experiencia){
+    return this.http.put<Experiencia>(this.URL+"/editar/"+experiencia.id,experiencia);
+   }
+   deleteExperiencia(experiencia:Experiencia){
+    return this.http.delete<Experiencia>(this.URL+"/borrar/"+experiencia.id);
+    
+   }
 }

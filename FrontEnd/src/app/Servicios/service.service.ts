@@ -9,17 +9,17 @@ import { Persona } from '../modelo/Persona.model';
 })
 export class ServiceService {
 
-   URL='http://localhost:8080/personas/';
+   URL='http://localhost:8080/personas';
 
      constructor(private http: HttpClient) { }
      
      public getPersona(){
-     return this.http.get<Persona[]>(this.URL+'traer');
+     return this.http.get<Persona[]>(this.URL+'/traer');
 
 
    }
    createPersona(persona:Persona){
-return this.http.post<Persona>(this.URL+'crear/',persona)
+return this.http.post<Persona>(this.URL+'/crear/',persona)
 
    }
   }

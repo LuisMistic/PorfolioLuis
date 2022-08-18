@@ -28,12 +28,12 @@ public class PersonaControler {
     }
 
     @PostMapping("/personas/crear")
-    public String createPersona(@RequestBody Persona persona) {
+    public void createPersona(@RequestBody Persona persona) {
         ipersonaService.savePersona(persona);
-        return "la Persona fue creada corretamente";
+        
     }
 
-    @DeleteMapping("/personas/borrar/{id})")
+    @DeleteMapping("/personas/borrar/{id}")
     public String deletePersona(@PathVariable Long id) {
         ipersonaService.deletePersona(id);
         return "La persona fue eliminada correctamente";
@@ -44,6 +44,10 @@ public class PersonaControler {
         persona.setId(id);
         ipersonaService.savePersona(persona);
         return persona;
+    }
+     @GetMapping(path = {"/persona/{id}"})
+    public Persona findPersona(@PathVariable("id") Long id) {
+        return ipersonaService.findPersona(id);
     }
 
 }

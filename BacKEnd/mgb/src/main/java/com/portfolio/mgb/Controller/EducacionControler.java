@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -29,12 +28,12 @@ public class EducacionControler {
     }
     
     @PostMapping ("/educacion/crear")
-    public String createEducacion(@RequestBody Educacion educacion) {
+    public void createEducacion(@RequestBody Educacion educacion) {
     ieducacionService.saveEducacion(educacion);
-    return "la Persona fue creada corretamente";
+    
     }
     
-    @DeleteMapping("/educacion/borrar/{id})")
+    @DeleteMapping("/educacion/borrar/{id}")
     public String deleteEducacion(@PathVariable Long id){
     ieducacionService.deleteEducacion(id);
     return "La persona fue eliminada correctamente";
@@ -44,6 +43,10 @@ public class EducacionControler {
         educacion.setId(id);
         ieducacionService.saveEducacion(educacion);
         return educacion;
+    }
+    @GetMapping(path = {"/educacion/{id}"})
+    public Educacion findEducacion(@PathVariable("id") Long id) {
+        return ieducacionService.findEducacion(id);
     }
     
 }

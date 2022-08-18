@@ -17,11 +17,23 @@ export class ExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
     this.experienciaService.getExperiencia().subscribe(data => {this.experiencias = data 
-    console.log(data);})
+    })
     
   }
   ExperienciaAgregar(){
     this.route.navigate(['experienciaAgregar'])
+  }
+
+   Editar(experiencia:Experiencia):void{
+  localStorage.setItem("id", experiencia.id.toString());
+  this.route.navigate(["editar"]);
+ }
+  Borrar(experiencia:Experiencia){
+  this.experienciaService.deleteExperiencia(experiencia)
+  .subscribe(data=>{
+    this.experiencias=this.experiencias.filter(p=>p!==experiencia);
+    alert("Usuario eliminado...");
+  })
   }
 
 }

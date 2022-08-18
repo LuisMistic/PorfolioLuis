@@ -16,9 +16,11 @@ experiencia:Experiencia=new Experiencia(0,"","")
   }
   Guardar(){
     this.service.createExperiencia(this.experiencia)
-    .subscribe(data =>{ this.experiencia = data;
+    .subscribe(data =>{
       alert("Se agrego con Exito...!!!");
-      this.route.navigate(["home"]);
+      this.route.navigate(['Home']);
     })
+    
   }
+ 
 }

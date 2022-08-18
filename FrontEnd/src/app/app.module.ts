@@ -19,6 +19,12 @@ import { ExperienciaAgregarComponent } from './Componentes/experiencia-agregar/e
 import { FormsModule } from '@angular/forms';
 import { ExperienciaService } from './Servicios/experiencia.service';
 
+import { ExperienciaEditarComponent } from './Componentes/experiencia-editar/experiencia-editar.component';
+import { BannerEditarComponent } from './Componentes/banner-editar/banner-editar.component';
+import { BannerAgregarComponent } from './Componentes/banner-agregar/banner-agregar.component';
+import { AlifeFileToBase64Module } from 'alife-file-to-base64';
+
+
 
 @NgModule({
   declarations: [
@@ -33,13 +39,18 @@ import { ExperienciaService } from './Servicios/experiencia.service';
     ContactoComponent,
     HomeComponent,
     LoginComponent,
-    ExperienciaAgregarComponent
+    ExperienciaAgregarComponent,
+    ExperienciaEditarComponent,
+    BannerEditarComponent,
+    BannerAgregarComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AlifeFileToBase64Module
   ],
   providers: [ServiceService,ExperienciaService],
   bootstrap: [AppComponent]

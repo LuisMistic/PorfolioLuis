@@ -1,7 +1,7 @@
 package com.portfolio.mgb.Controller;
 
-
 import com.portfolio.mgb.Entity.Experiencia;
+import com.portfolio.mgb.Entity.Persona;
 import com.portfolio.mgb.Interface.IExperienciaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class ExperienciaController {
 
     @Autowired
@@ -28,15 +28,15 @@ public class ExperienciaController {
     }
 
     @PostMapping("/experiencia/crear")
-    public String createExperiencia(@RequestBody Experiencia experiencia) {
+    public void createExperiencia(@RequestBody Experiencia experiencia) {
         iexperienciaService.saveExperiencia(experiencia);
-        return "la Persona fue creada corretamente";
+
     }
 
-    @DeleteMapping("/experiencia/borrar/{id})")
-    public String deleteExperiencia(@PathVariable Long id) {
+    @DeleteMapping("/experiencia/borrar/{id}")
+    public void deleteExperiencia(@PathVariable Long id) {
         iexperienciaService.deleteExperiencia(id);
-        return "La persona fue eliminada correctamente";
+        
     }
 
     @PutMapping("/experiencia/editar/{id}")
@@ -45,5 +45,9 @@ public class ExperienciaController {
         iexperienciaService.saveExperiencia(experiencia);
         return experiencia;
     }
-    
+
+    @GetMapping(path = {"/experiencia/{id}"})
+    public Experiencia findExperiencia(@PathVariable("id") Long id) {
+        return iexperienciaService.findExperiencia(id);
+    }
 }

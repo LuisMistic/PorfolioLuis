@@ -31,12 +31,12 @@ public class HomeControler {
     }
     
     @PostMapping ("/home/crear")
-    public String createHome(@RequestBody Home home) {
+    public void createHome(@RequestBody Home home) {
     ihomeService.saveHome(home);
-    return "la Persona fue creada corretamente";
+    
     }
     
-    @DeleteMapping("/home/borrar/{id})")
+    @DeleteMapping("/home/borrar/{id}")
     public String deleteHome(@PathVariable Long id){
     ihomeService.deleteHome(id);
     return "La persona fue eliminada correctamente";
@@ -47,6 +47,9 @@ public class HomeControler {
         ihomeService.saveHome(home);
         return home;
     }
-
+    @GetMapping(path = {"/home/{id}"})
+    public Home findHome(@PathVariable("id") Long id) {
+        return ihomeService.findHome(id);
+    }
     
 }

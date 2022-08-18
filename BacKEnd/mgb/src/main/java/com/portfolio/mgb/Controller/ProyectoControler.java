@@ -29,12 +29,12 @@ public class ProyectoControler {
     }
     
     @PostMapping ("/proyecto/crear")
-    public String createProyecto(@RequestBody Proyecto proyecto) {
+    public void createProyecto(@RequestBody Proyecto proyecto) {
     iproyectoService.saveProyecto(proyecto);
-    return "la Persona fue creada corretamente";
+    
     }
     
-    @DeleteMapping("/proyecto/borrar/{id})")
+    @DeleteMapping("/proyecto/borrar/{id}")
     public String deleteProyecto(@PathVariable Long id){
     iproyectoService.deleteProyecto(id);
     return "La persona fue eliminada correctamente";
@@ -44,5 +44,9 @@ public class ProyectoControler {
         proyecto.setId(id);
         iproyectoService.saveProyecto(proyecto);
         return proyecto;
+    }
+      @GetMapping(path = {"/proyecto/{id}"})
+    public Proyecto findProyecto(@PathVariable("id") Long id) {
+        return iproyectoService.findProyecto(id);
     }
 }

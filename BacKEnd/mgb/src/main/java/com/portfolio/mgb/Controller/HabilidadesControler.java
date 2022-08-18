@@ -28,12 +28,11 @@ public class HabilidadesControler {
     }
 
     @PostMapping("/habilidades/crear")
-    public String createHabilidades(@RequestBody Habilidades habilidades) {
+    public void createHabilidades(@RequestBody Habilidades habilidades) {
         ihabilidadesService.saveHabilidades(habilidades);
-        return "la Persona fue creada corretamente";
     }
 
-    @DeleteMapping("/habilidades/borrar/{id})")
+    @DeleteMapping("/habilidades/borrar/{id}")
     public String deleteHabilidades(@PathVariable Long id) {
         ihabilidadesService.deleteHabilidades(id);
         return "La persona fue eliminada correctamente";
@@ -45,5 +44,8 @@ public class HabilidadesControler {
         ihabilidadesService.saveHabilidades(habilidades);
         return habilidades;
     }
-
+    @GetMapping(path = {"/habilidades/{id}"})
+    public Habilidades findHabilidades(@PathVariable("id") Long id) {
+        return ihabilidadesService.findHabilidades(id);
+    }
 }
