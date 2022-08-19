@@ -2,6 +2,8 @@
     <h1 id="edu">
         EDUCACION
     </h1>
+    <button (click)="EducacionAgregar()"class="btn" style="float: center ;"><i class="fa fa-id-badge"
+                            aria-hidden="true"></i></button>
     <br>
 </div>
 <div class="row">
@@ -12,8 +14,11 @@
             <br>
 
             <div class="row">
-                <button class="contsaButton">
-
+                
+  <div *ngFor="let educacion of Educacion"  class="contsaButton"> 
+                        
+                        <div class="centrado" >
+                            {{educacion.id}}<h2 id="multimedia"> {{educacion.nombre}}   {{educacion.descripcion}}</h2>
                     <div class="col-12">
                         <h2>ARGENTINA PROGRAMA</h2>
                         <h3>Yo programo</h3>
@@ -21,7 +26,7 @@
                             Actualidad
                         </h4>
                     </div>
-                </button>
+                        </div></div>
 
                 <div class="botonera">
                     <button class="btn" style="float: center ;"><i class="fa fa-pencil" aria-hidden="true"></i></button>
@@ -34,114 +39,4 @@
             </div>
 
 
-            <div class="row">
-                <button class="contsaButton">
-
-                    <div class="col-12">
-                        <h2>ARGENTINA PRORAMA</h2>
-                        <h2>Se programar</h2>
-                        <h4>
-                            2021
-                        </h4>
-                        <h4>
-                            Actualidad
-                        </h4>
-                    </div>
-                </button>
-                <div class="botonera">
-                    <button class="btn" style="float: center ;"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                    <button class="btn" style="float: center ;"><i class="fa fa-id-badge"
-                            aria-hidden="true"></i></button>
-                    <button class="btn" style="float: center ;"><i class="fa fa-trash-o"
-                            aria-hidden="true"></i></button>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <button class="contsaButton">
-
-                    <div class="col-12">
-                        <h2>I.A.C </h2>
-                        <h3>Diseñador Web</h3>
-                        <h3> Html- Dreamweaver - flash</h3>
-                        <h4>
-                            2005
-                        </h4>
-                        <h4>
-                            Actualidad
-                        </h4>
-                    </div>
-                </button>
-                <div class="botonera">
-                    <button class="btn" style="float: center ;"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                    <button class="btn" style="float: center ;"><i class="fa fa-id-badge"
-                            aria-hidden="true"></i></button>
-                    <button class="btn" style="float: center ;"><i class="fa fa-trash-o"
-                            aria-hidden="true"></i></button>
-                </div>
-            </div>
-
-            <div class="row">
-                <button class="contsaButton">
-
-                    <div class="col-12">
-                        <h2>I.A.C. Diseño grafico</h2>
-                        <h3> Corel Draw - Ilustrator - adobe Photoshop</h3>
-                        <h4>
-                            2003
-                        </h4>
-                        <h4>
-                            Actualidad
-                        </h4>
-                    </div>
-                </button>
-                <div class="botonera">
-                    <button class="btn" style="float: center ;"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                    <button class="btn" style="float: center ;"><i class="fa fa-id-badge"
-                            aria-hidden="true"></i></button>
-                    <button class="btn" style="float: center ;"><i class="fa fa-trash-o"
-                            aria-hidden="true"></i></button>
-                </div>
-            </div>
-
-            <div class="row">
-                <button class="contsaButton">
-                    <div class="col-12">
-                        <h2>INSTITUTO BELTRAN 2001</h2>
-                        <h3>Operador de pc con entorno Grafico</h3>
-                        <h3>Manejo de office</h3>
-                        <h4>
-                            2001
-                        </h4>
-                        <h4> Actualida
-                        </h4>
-                    </div>
-                </button>
-                <div class="botonera">
-                    <button class="btn" style="float: center ;"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                    <button class="btn" style="float: center ;"><i class="fa fa-id-badge"
-                            aria-hidden="true"></i></button>
-                    <button class="btn" style="float: center ;"><i class="fa fa-trash-o"
-                            aria-hidden="true"></i></button>
-                </div>
-            </div>
-
-            <div class="row">
-                <button class="contsaButton">
-                    <div class="col-12">
-                        <h2>Estudios Secundarios comerical</h2>
-                        <h3>Colegio San Juan (Banfield)</h3>
-                        <h4>
-                            Actualidad
-                        </h4>
-                    </div>
-                </button>
-                <div class="botonera">
-                    <button class="btn" style="float: center ;"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                    <button class="btn" style="float: center ;"><i class="fa fa-id-badge"
-                            aria-hidden="true"></i></button>
-                    <button class="btn" style="float: center ;"><i class="fa fa-trash-o"
-                            aria-hidden="true"></i></button>
-                </div>
-            </div>
+            

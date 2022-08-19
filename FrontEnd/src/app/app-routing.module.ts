@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BannerEditarComponent } from './Componentes/banner-editar/banner-editar.component';
+import { EducacionComponent } from './Componentes/educacion/educacion.component';
 import { ExperienciaAgregarComponent } from './Componentes/experiencia-agregar/experiencia-agregar.component';
 import { ExperienciaEditarComponent } from './Componentes/experiencia-editar/experiencia-editar.component';
 import { ExperienciaComponent } from './Componentes/experiencia/experiencia.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'editarHome', component: BannerEditarComponent},
   {path:'Home', component: HomeComponent},
   {path:'Experiencia', component: ExperienciaComponent},
+  {path: 'Educacion', component: EducacionComponent},
   
 ];
 

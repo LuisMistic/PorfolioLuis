@@ -23,6 +23,8 @@ import { ExperienciaEditarComponent } from './Componentes/experiencia-editar/exp
 import { BannerEditarComponent } from './Componentes/banner-editar/banner-editar.component';
 import { BannerAgregarComponent } from './Componentes/banner-agregar/banner-agregar.component';
 import { AlifeFileToBase64Module } from 'alife-file-to-base64';
+import { EducacionAgregarComponent } from './Componentes/educacion-agregar/educacion-agregar.component';
+import { EducacionEditarComponent } from './Componentes/educacion-editar/educacion-editar.component';
 
 
 
@@ -43,6 +45,8 @@ import { AlifeFileToBase64Module } from 'alife-file-to-base64';
     ExperienciaEditarComponent,
     BannerEditarComponent,
     BannerAgregarComponent,
+    EducacionAgregarComponent,
+    EducacionEditarComponent,
     
   ],
   imports: [
