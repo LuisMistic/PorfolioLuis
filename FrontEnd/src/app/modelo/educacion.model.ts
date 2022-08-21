@@ -1,8 +1,9 @@
 export class Educacion {
-    id:number;
+
+   id:number;
     nombre: String;
-    descripcion: String;   
-    fecha: String; 
+    descripcion: String;
+    fecha: String;
     
     
     constructor(id:number,nombre:String, descripcion:String, fecha:String) {

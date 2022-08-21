@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BannerEditarComponent } from './Componentes/banner-editar/banner-editar.component';
+import { EducacionAgregarComponent } from './Componentes/educacion-agregar/educacion-agregar.component';
+import { EducacionEditarComponent } from './Componentes/educacion-editar/educacion-editar.component';
 import { EducacionComponent } from './Componentes/educacion/educacion.component';
 import { ExperienciaAgregarComponent } from './Componentes/experiencia-agregar/experiencia-agregar.component';
 import { ExperienciaEditarComponent } from './Componentes/experiencia-editar/experiencia-editar.component';
@@ -20,6 +22,8 @@ const routes: Routes = [
   {path:'Home', component: HomeComponent},
   {path:'Experiencia', component: ExperienciaComponent},
   {path: 'Educacion', component: EducacionComponent},
+  {path:'EducacionAgregar', component: EducacionAgregarComponent},
+  {path:'EducacionEditar', component:EducacionEditarComponent},
   
 ];
 

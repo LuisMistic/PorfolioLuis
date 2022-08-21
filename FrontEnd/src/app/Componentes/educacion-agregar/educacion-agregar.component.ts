@@ -10,13 +10,13 @@ import { EducacionService } from 'src/app/Servicios/educacion.service';
 })
 export class EducacionAgregarComponent implements OnInit {
 
- educacion:Educacion=new Educacion(0,"","","")
+ educacions:Educacion=new Educacion(0,"","","")
   constructor(private route: Router, private service:EducacionService) { }
 
   ngOnInit() {
   }
   Guardar(){
-    this.service.createEducacion(this.educacion)
+    this.service.createEducacion(this.educacions)
     .subscribe(data =>{
       alert("Se agrego con Exito...!!!");
       this.route.navigate(['Home']);

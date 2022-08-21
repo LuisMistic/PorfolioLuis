@@ -12,11 +12,11 @@ import { EducacionService } from 'src/app/Servicios/educacion.service';
 
   export class EducacionComponent implements OnInit {
   //persona: Persona = new Persona ("","","");
-  Educacion:Educacion []=[];
+   Educa:Educacion []=[];
   constructor(public EducacionService: EducacionService, private route: Router) {}
 
   ngOnInit(): void {
-    this.EducacionService.getEducacion().subscribe(data => {this.Educacion = data 
+    this.EducacionService.getEducacion().subscribe(data => {this.Educa = data 
     })
     
   }
@@ -24,14 +24,14 @@ import { EducacionService } from 'src/app/Servicios/educacion.service';
     this.route.navigate(['EducacionAgregar'])
   }
 
-   Editar(Educacion:Educacion):void{
-  localStorage.setItem("id", Educacion.id.toString());
+   Editar(educar:Educacion):void{
+  localStorage.setItem("id", educar.id.toString());
   this.route.navigate(["editar"]);
  }
   Borrar(Educacion:Educacion){
   this.EducacionService.deleteEducacion(Educacion)
   .subscribe(data=>{
-    this.Educacion=this.Educacion.filter(p=>p!==Educacion);
+    this.Educa=this.Educa.filter(p=>p!==Educacion);
     alert("Usuario eliminado...");
   })
   }

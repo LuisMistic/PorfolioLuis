@@ -6,26 +6,34 @@
     <div class="card-body">
       <form action="">
         <div class="from-group">
-          {{educacion.id}}
+          {{educacions.id}}
           <label for="">educacion:</label>
           <input
-            [(ngModel)]="educacion.nombre"
-            name="nombre"
-            type="text"
-            class="form-control"
+          [(ngModel)]="educacions.nombre"
+          name="nombre"
+          type="text"
+          class="form-control"
           />
-           
+          
         </div>
         <div class="from-group">
-          <label for="">Empresa</label>
-          <input 
-           [(ngModel)]="educacion.descripcion"
-           name="descripcion"
-           type="text" class="form-control" />
+            <label for="">Institucion</label>
+            <input 
+            [(ngModel)]="educacions.descripcion"
+            name="descripcion"
+            type="text" class="form-control" />
         </div>
+        <div class="from-group">
+            <label for="">fecha</label>
+            <input 
+            [(ngModel)]="educacions.fecha"
+            name="descripcion"
+            type="text" class="form-control" />
+        </div>
+
+    </form>
         <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
-       
-      </form>
+        
     </div>
-  </div>
+</div>
 </div>

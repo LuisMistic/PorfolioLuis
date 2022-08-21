@@ -1,10 +1,13 @@
 <div class="edu">
     <h1 id="edu">
         EDUCACION
+        
     </h1>
+    <div class="row">
+    <div class="col-12">
     <button (click)="EducacionAgregar()"class="btn" style="float: center ;"><i class="fa fa-id-badge"
                             aria-hidden="true"></i></button>
-    <br>
+</div></div><br>
 </div>
 <div class="row">
     <div class="col-12">
@@ -15,26 +18,26 @@
 
             <div class="row">
                 
-  <div *ngFor="let educacion of Educacion"  class="contsaButton"> 
+  <div *ngFor="let educacion of Educa"  class="contsaButton"> 
                         
                         <div class="centrado" >
-                            {{educacion.id}}<h2 id="multimedia"> {{educacion.nombre}}   {{educacion.descripcion}}</h2>
+                            {{educacion.id}}<h2 id="multimedia"> {{educacion.nombre}}   </h2>
                     <div class="col-12">
-                        <h2>ARGENTINA PROGRAMA</h2>
+                        <h2>{{educacion.descripcion}}</h2>
                         <h3>Yo programo</h3>
                         <h4>
-                            Actualidad
+                            {{educacion.fecha}}
                         </h4>
                     </div>
                         </div></div>
 
-                <div class="botonera">
-                    <button class="btn" style="float: center ;"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                    <button class="btn" style="float: center ;"><i class="fa fa-id-badge"
-                            aria-hidden="true"></i></button>
-                    <button class="btn" style="float: center ;"><i class="fa fa-trash-o"
-                            aria-hidden="true"></i></button>
-                </div>
+                 <div class="botonera">
+                            
+                             <button (click)="Editar(educar)" class="btn" style="float: center ;">
+                                <i class="fa fa-pencil" aria-hidden="true"></i></button>
+                            <button (click)="Borrar(educar)"class="btn" style="float: center ;"><i class="fa fa-trash-o"
+                                    aria-hidden="true"></i></button>
+                        </div>
                 <br><br>
             </div>
 

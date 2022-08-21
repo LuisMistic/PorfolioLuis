@@ -37,6 +37,8 @@ import { EducacionEditarComponent } from './Componentes/educacion-editar/educaci
     ExperienciaComponent,
     AudiovisualesComponent,
     EducacionComponent,
+    EducacionAgregarComponent,
+    EducacionEditarComponent,
     HabilidadesComponent,
     ContactoComponent,
     HomeComponent,
@@ -45,8 +47,6 @@ import { EducacionEditarComponent } from './Componentes/educacion-editar/educaci
     ExperienciaEditarComponent,
     BannerEditarComponent,
     BannerAgregarComponent,
-    EducacionAgregarComponent,
-    EducacionEditarComponent,
     
   ],
   imports: [
