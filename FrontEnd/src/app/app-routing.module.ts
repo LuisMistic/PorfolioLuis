@@ -7,6 +7,9 @@ import { EducacionComponent} from './Componentes/educacion/educacion.component';
 import { ExperienciaAgregarComponent } from './Componentes/experiencia-agregar/experiencia-agregar.component';
 import { ExperienciaEditarComponent } from './Componentes/experiencia-editar/experiencia-editar.component';
 import { ExperienciaComponent } from './Componentes/experiencia/experiencia.component';
+import { HabilidadesAgregarComponent } from './Componentes/habilidades-agregar/habilidades-agregar.component';
+import { HabilidadesEditarComponent } from './Componentes/habilidades-editar/habilidades-editar.component';
+import { HabilidadesComponent } from './Componentes/habilidades/habilidades.component';
 
 import { HomeComponent } from './Componentes/home/home.component';
 import { LoginComponent } from './Componentes/login/login.component';
@@ -24,7 +27,9 @@ const routes: Routes = [
   {path: 'Educacion', component: EducacionComponent},
   {path:'EducacionAgregar', component: EducacionAgregarComponent},
   {path:'EducacionEditar', component:EducacionEditarComponent},
-  
+  {path:'habilidadesComponent', component: HabilidadesComponent},
+  {path:'HabilidadesAgregar', component: HabilidadesAgregarComponent},
+  {path:'HabilidadesEditar', component: HabilidadesEditarComponent},
 ];
 
 @NgModule({

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Habilidades } from 'src/app/modelo/habilidades.model';
+import { HabilidadesService } from 'src/app/Servicios/habilidades.service';
 
 @Component({
   selector: 'app-habilidades-agregar',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HabilidadesAgregarComponent implements OnInit {
 
-  constructor() { }
+  habilidad:Habilidades=new Habilidades(0,"","",)
+  constructor(private route: Router, private service:HabilidadesService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+  Guardar(){
+    this.service.createHabilidades(this.habilidad)
+    .subscribe(data =>{
+      alert("Se agrego con Exito...!!!");
+      this.route.navigate(['Home']);
+    })
+    
   }
 
 }

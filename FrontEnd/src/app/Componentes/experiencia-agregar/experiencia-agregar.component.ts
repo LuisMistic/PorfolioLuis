@@ -17,10 +17,13 @@ experiencia:Experiencia=new Experiencia(0,"","")
   Guardar(){
     this.service.createExperiencia(this.experiencia)
     .subscribe(data =>{
-      alert("Se agrego con Exito...!!!");
+      
       this.route.navigate(['Home']);
+      
     })
-    
+     alert("Se agrego con Exito...!!!");
+  
+}
   }
  
-}
+
