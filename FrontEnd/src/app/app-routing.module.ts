@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BannerEditarComponent } from './Componentes/banner-editar/banner-editar.component';
 import { EducacionAgregarComponent } from './Componentes/educacion-agregar/educacion-agregar.component';
 import { EducacionEditarComponent } from './Componentes/educacion-editar/educacion-editar.component';
-import { EducacionComponent } from './Componentes/educacion/educacion.component';
+import { EducacionComponent} from './Componentes/educacion/educacion.component';
 import { ExperienciaAgregarComponent } from './Componentes/experiencia-agregar/experiencia-agregar.component';
 import { ExperienciaEditarComponent } from './Componentes/experiencia-editar/experiencia-editar.component';
 import { ExperienciaComponent } from './Componentes/experiencia/experiencia.component';

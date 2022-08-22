@@ -11,7 +11,7 @@ import { ExperienciaService } from 'src/app/Servicios/experiencia.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  //persona: Persona = new Persona ("","","");
+  
   experiencias:Experiencia []=[];
   constructor(public experienciaService: ExperienciaService, private route: Router) {}
 

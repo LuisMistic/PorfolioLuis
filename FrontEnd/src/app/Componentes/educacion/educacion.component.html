@@ -1,5 +1,6 @@
 <div class="edu">
-    <h1 id="edu">
+
+    <h1 id="educacion">
         EDUCACION
         
     </h1>
@@ -7,18 +8,12 @@
     <div class="col-12">
     <button (click)="EducacionAgregar()"class="btn" style="float: center ;"><i class="fa fa-id-badge"
                             aria-hidden="true"></i></button>
-</div></div><br>
-</div>
-<div class="row">
-    <div class="col-12">
-        <div class="experiencia">
+</div></div>
+<br>
 
-
-            <br>
-
-            <div class="row">
+            
                 
-  <div *ngFor="let educacion of Educa"  class="contsaButton"> 
+  <div *ngFor="let educacion of educacions"  class="contsaButton"> 
                         
                         <div class="centrado" >
                             {{educacion.id}}<h2 id="multimedia"> {{educacion.nombre}}   </h2>
@@ -28,18 +23,22 @@
                         <h4>
                             {{educacion.fecha}}
                         </h4>
-                    </div>
-                        </div></div>
+                    
+                    
 
                  <div class="botonera">
                             
-                             <button (click)="Editar(educar)" class="btn" style="float: center ;">
+                             <button (click)="Editar(educacion)" class="btn" style="float: center ;">
                                 <i class="fa fa-pencil" aria-hidden="true"></i></button>
-                            <button (click)="Borrar(educar)"class="btn" style="float: center ;"><i class="fa fa-trash-o"
+                             <button (click)="Borrar(educacion)"class="btn" style="float: center ;"><i class="fa fa-trash-o"
                                     aria-hidden="true"></i></button>
                         </div>
+                        </div>
+                        </div>
+</div>
+</div>
                 <br><br>
-            </div>
+            
 
 
             

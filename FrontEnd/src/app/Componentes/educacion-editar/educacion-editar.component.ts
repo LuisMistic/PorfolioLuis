@@ -14,7 +14,7 @@ export class EducacionEditarComponent implements OnInit {
   constructor(private route:Router,private service:EducacionService) { }
 
   
- educacion:Educacion=new Educacion(0,"","","");
+ educacions:Educacion=new Educacion(0,"","","");
 
 ngOnInit() {
     this.Editar();
@@ -23,14 +23,14 @@ ngOnInit() {
  Editar(){
   let id=localStorage.getItem("id");
   this.service.getEducacionId(+id).subscribe(data => {
-  this.educacion=data;
+  this.educacions=data;
     
     
   })
  }
-Actualizar(educacion:Educacion){
-  this.service.updateEducacion(educacion)
-  .subscribe(data=>{this.educacion=data;
+Actualizar(educacions:Educacion){
+  this.service.updateEducacion(educacions)
+  .subscribe(data=>{this.educacions=data;
     alert("se Actualizo con Exito...!!!!");
     this.route.navigate(['Home'])
   })
