@@ -1,13 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.portfolio.Luis.security.service;
 
-/**
- *
- * @author User
- */
+import com.portfolio.Luis.security.entity.Rol;
+import com.portfolio.Luis.security.enums.RolNombre;
+import com.portfolio.Luis.security.repository.RolRepository;
+import java.util.Optional;
+import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+@Service
+@Transactional
 public class RolService {
     
+    @Autowired
+    RolRepository rolRepository;
+    
+    public Optional<Rol> getByRolNombre (RolNombre rolNombre){
+    
+    return rolRepository.findByRolNombre(rolNombre);
+    }
 }

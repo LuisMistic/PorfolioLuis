@@ -23,6 +23,7 @@ const routes: Routes = [
   {path:'editar', component:ExperienciaEditarComponent},
   {path:'editarHome', component: BannerEditarComponent},
   {path:'Home', component: HomeComponent},
+  
   {path:'Experiencia', component: ExperienciaComponent},
   {path: 'Educacion', component: EducacionComponent},
   {path:'EducacionAgregar', component: EducacionAgregarComponent},

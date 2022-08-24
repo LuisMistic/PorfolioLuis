@@ -26,6 +26,11 @@ public class Home {
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String nombre;
     
+    @NotNull
+    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+    private String apellido;
+    
+    
   
     @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
