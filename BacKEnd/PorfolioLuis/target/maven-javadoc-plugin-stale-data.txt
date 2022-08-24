@@ -1,0 +1,172 @@
+@options
+@packages
+@argfile
+-classpath
+'C:/Users/User/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.6.7/spring-boot-starter-data-jpa-2.6.7.jar;C:/Users/User/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.6.7/spring-boot-starter-aop-2.6.7.jar;C:/Users/User/.m2/repository/org/aspectj/aspectjweaver/1.9.7/aspectjweaver-1.9.7.jar;C:/Users/User/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.6.7/spring-boot-starter-jdbc-2.6.7.jar;C:/Users/User/.m2/repository/com/zaxxer/HikariCP/4.0.3/HikariCP-4.0.3.jar;C:/Users/User/.m2/repository/org/springframework/spring-jdbc/5.3.19/spring-jdbc-5.3.19.jar;C:/Users/User/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar;C:/Users/User/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar;C:/Users/User/.m2/repository/org/hibernate/hibernate-core/5.6.8.Final/hibernate-core-5.6.8.Final.jar;C:/Users/User/.m2/repository/org/jboss/logging/jboss-logging/3.4.3.Final/jboss-logging-3.4.3.Final.jar;C:/Users/User/.m2/repository/net/bytebuddy/byte-buddy/1.11.22/byte-buddy-1.11.22.jar;C:/Users/User/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar;C:/Users/User/.m2/repository/org/jboss/jandex/2.4.2.Final/jandex-2.4.2.Final.jar;C:/Users/User/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar;C:/Users/User/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar;C:/Users/User/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.6/jaxb-runtime-2.3.6.jar;C:/Users/User/.m2/repository/org/glassfish/jaxb/txw2/2.3.6/txw2-2.3.6.jar;C:/Users/User/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.12/istack-commons-runtime-3.0.12.jar;C:/Users/User/.m2/repository/org/springframework/data/spring-data-jpa/2.6.4/spring-data-jpa-2.6.4.jar;C:/Users/User/.m2/repository/org/springframework/data/spring-data-commons/2.6.4/spring-data-commons-2.6.4.jar;C:/Users/User/.m2/repository/org/springframework/spring-orm/5.3.19/spring-orm-5.3.19.jar;C:/Users/User/.m2/repository/org/springframework/spring-context/5.3.19/spring-context-5.3.19.jar;C:/Users/User/.m2/repository/org/springframework/spring-tx/5.3.19/spring-tx-5.3.19.jar;C:/Users/User/.m2/repository/org/springframework/spring-beans/5.3.19/spring-beans-5.3.19.jar;C:/Users/User/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar;C:/Users/User/.m2/repository/org/springframework/spring-aspects/5.3.19/spring-aspects-5.3.19.jar;C:/Users/User/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar;C:/Users/User/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.6.7/spring-boot-starter-web-2.6.7.jar;C:/Users/User/.m2/repository/org/springframework/boot/spring-boot-starter/2.6.7/spring-boot-starter-2.6.7.jar;C:/Users/User/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.6.7/spring-boot-starter-logging-2.6.7.jar;C:/Users/User/.m2/repository/ch/qos/logback/logback-classic/1.2.11/logback-classic-1.2.11.jar;C:/Users/User/.m2/repository/ch/qos/logback/logback-core/1.2.11/logback-core-1.2.11.jar;C:/Users/User/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.17.2/log4j-to-slf4j-2.17.2.jar;C:/Users/User/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar;C:/Users/User/.m2/repository/org/slf4j/jul-to-slf4j/1.7.36/jul-to-slf4j-1.7.36.jar;C:/Users/User/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar;C:/Users/User/.m2/repository/org/yaml/snakeyaml/1.29/snakeyaml-1.29.jar;C:/Users/User/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.6.7/spring-boot-starter-json-2.6.7.jar;C:/Users/User/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.2.1/jackson-databind-2.13.2.1.jar;C:/Users/User/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.2/jackson-annotations-2.13.2.jar;C:/Users/User/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.2/jackson-core-2.13.2.jar;C:/Users/User/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.13.2/jackson-datatype-jdk8-2.13.2.jar;C:/Users/User/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.13.2/jackson-datatype-jsr310-2.13.2.jar;C:/Users/User/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.13.2/jackson-module-parameter-names-2.13.2.jar;C:/Users/User/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.6.7/spring-boot-starter-tomcat-2.6.7.jar;C:/Users/User/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.62/tomcat-embed-core-9.0.62.jar;C:/Users/User/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.62/tomcat-embed-el-9.0.62.jar;C:/Users/User/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.62/tomcat-embed-websocket-9.0.62.jar;C:/Users/User/.m2/repository/org/springframework/spring-web/5.3.19/spring-web-5.3.19.jar;C:/Users/User/.m2/repository/org/springframework/spring-webmvc/5.3.19/spring-webmvc-5.3.19.jar;C:/Users/User/.m2/repository/org/springframework/spring-expression/5.3.19/spring-expression-5.3.19.jar;C:/Users/User/.m2/repository/org/springframework/boot/spring-boot/2.6.7/spring-boot-2.6.7.jar;C:/Users/User/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.6.7/spring-boot-autoconfigure-2.6.7.jar;C:/Users/User/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar;C:/Users/User/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar;C:/Users/User/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar;C:/Users/User/.m2/repository/org/springframework/spring-core/5.3.19/spring-core-5.3.19.jar;C:/Users/User/.m2/repository/org/springframework/spring-jcl/5.3.19/spring-jcl-5.3.19.jar;C:/Users/User/.m2/repository/org/springframework/boot/spring-boot-starter-security/2.6.7/spring-boot-starter-security-2.6.7.jar;C:/Users/User/.m2/repository/org/springframework/spring-aop/5.3.19/spring-aop-5.3.19.jar;C:/Users/User/.m2/repository/org/springframework/security/spring-security-config/5.6.3/spring-security-config-5.6.3.jar;C:/Users/User/.m2/repository/org/springframework/security/spring-security-core/5.6.3/spring-security-core-5.6.3.jar;C:/Users/User/.m2/repository/org/springframework/security/spring-security-crypto/5.6.3/spring-security-crypto-5.6.3.jar;C:/Users/User/.m2/repository/org/springframework/security/spring-security-web/5.6.3/spring-security-web-5.6.3.jar;C:/Users/User/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'1.8'
+-sourcepath
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java;I:/Porfolio/Porfolio/BacKEnd/mgb/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2022. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'I:/Porfolio/Porfolio/BacKEnd/mgb/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'PorfolioLuis 0.0.1-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'I:/Porfolio/Porfolio/BacKEnd/mgb/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'PorfolioLuis 0.0.1-SNAPSHOT API'
+com.portfolio.Luis.Controller
+com.portfolio.Luis.Entity
+com.portfolio.Luis.Interface
+com.portfolio.Luis
+com.portfolio.Luis.Repository
+com.portfolio.Luis.security.controller
+com.portfolio.Luis.security.dto
+com.portfolio.Luis.security.entity
+com.portfolio.Luis.security.enums
+com.portfolio.Luis.security.jwt
+com.portfolio.Luis.security
+com.portfolio.Luis.security.repository
+com.portfolio.Luis.security.service
+com.portfolio.Luis.Service
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Controller/EducacionControler.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Controller/ExperienciaController.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Controller/HabilidadesControler.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Controller/HomeControler.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Controller/PersonaControler.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Controller/ProyectoControler.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Entity/Educacion.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Entity/Experiencia.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Entity/Habilidades.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Entity/Home.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Entity/Persona.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Entity/Proyecto.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Interface/IEducacionService.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Interface/IExperienciaService.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Interface/IHabilidadesService.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Interface/IHomeService.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Interface/IPersonaService.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Interface/IProyectoService.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/LuisApplication.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Repository/IEducacionRepository.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Repository/IExperienciaRepository.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Repository/IHabilidadesRepository.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Repository/IHomeRepository.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Repository/IPersonaRepository.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Repository/IProyectoRepository.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/controller/AuthController.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/dto/JwtDto.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/dto/LoginUsuario.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/dto/NuevoUsuario.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/entity/Rol.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/entity/Usuario.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/entity/UsuarioPrincipal.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/enums/RolNombre.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/jwt/JwtEntryPoint.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/jwt/JwtProvider.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/jwt/JwtTokenFilter.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/MainSecurity.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/repository/RolRepository.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/repository/UsuarioRepository.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/service/RolService.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/service/UserDetailsServiceImpl.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/security/service/UsuarioService.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Service/ImpEducacionService.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Service/ImpExperienciaService.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Service/ImpHabilidadesService.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Service/ImpHomeService.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Service/ImpPersonaService.java'
+'I:/Porfolio/Porfolio/BacKEnd/mgb/src/main/java/com/portfolio/Luis/Service/ImpProyectoService.java'
+C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.6.7\spring-boot-starter-data-jpa-2.6.7.jar = 1652320332424
+C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.6.7\spring-boot-starter-aop-2.6.7.jar = 1652320332137
+C:\Users\User\.m2\repository\org\aspectj\aspectjweaver\1.9.7\aspectjweaver-1.9.7.jar = 1652320333176
+C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.6.7\spring-boot-starter-jdbc-2.6.7.jar = 1652320332543
+C:\Users\User\.m2\repository\com\zaxxer\HikariCP\4.0.3\HikariCP-4.0.3.jar = 1652320332647
+C:\Users\User\.m2\repository\org\springframework\spring-jdbc\5.3.19\spring-jdbc-5.3.19.jar = 1652320333235
+C:\Users\User\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar = 1652320332866
+C:\Users\User\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar = 1652320333022
+C:\Users\User\.m2\repository\org\hibernate\hibernate-core\5.6.8.Final\hibernate-core-5.6.8.Final.jar = 1652320334217
+C:\Users\User\.m2\repository\org\jboss\logging\jboss-logging\3.4.3.Final\jboss-logging-3.4.3.Final.jar = 1652320333315
+C:\Users\User\.m2\repository\net\bytebuddy\byte-buddy\1.11.22\byte-buddy-1.11.22.jar = 1652320333923
+C:\Users\User\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar = 1652320333494
+C:\Users\User\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar = 1652320333596
+C:\Users\User\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar = 1652320333631
+C:\Users\User\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar = 1652320333798
+C:\Users\User\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.6\jaxb-runtime-2.3.6.jar = 1652320334126
+C:\Users\User\.m2\repository\org\glassfish\jaxb\txw2\2.3.6\txw2-2.3.6.jar = 1652320333971
+C:\Users\User\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.12\istack-commons-runtime-3.0.12.jar = 1652320334087
+C:\Users\User\.m2\repository\org\springframework\data\spring-data-jpa\2.6.4\spring-data-jpa-2.6.4.jar = 1652320334338
+C:\Users\User\.m2\repository\org\springframework\data\spring-data-commons\2.6.4\spring-data-commons-2.6.4.jar = 1652320334426
+C:\Users\User\.m2\repository\org\springframework\spring-orm\5.3.19\spring-orm-5.3.19.jar = 1652320334476
+C:\Users\User\.m2\repository\org\springframework\spring-context\5.3.19\spring-context-5.3.19.jar = 1652320334558
+C:\Users\User\.m2\repository\org\springframework\spring-tx\5.3.19\spring-tx-5.3.19.jar = 1652320334558
+C:\Users\User\.m2\repository\org\springframework\spring-beans\5.3.19\spring-beans-5.3.19.jar = 1652320334817
+C:\Users\User\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar = 1652320334713
+C:\Users\User\.m2\repository\org\springframework\spring-aspects\5.3.19\spring-aspects-5.3.19.jar = 1652320334776
+C:\Users\User\.m2\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar = 1655342487301
+C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.6.7\spring-boot-starter-web-2.6.7.jar = 1652320334838
+C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter\2.6.7\spring-boot-starter-2.6.7.jar = 1652320334860
+C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.6.7\spring-boot-starter-logging-2.6.7.jar = 1652320335009
+C:\Users\User\.m2\repository\ch\qos\logback\logback-classic\1.2.11\logback-classic-1.2.11.jar = 1652320335115
+C:\Users\User\.m2\repository\ch\qos\logback\logback-core\1.2.11\logback-core-1.2.11.jar = 1652320335152
+C:\Users\User\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.17.2\log4j-to-slf4j-2.17.2.jar = 1652320335117
+C:\Users\User\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar = 1652320335161
+C:\Users\User\.m2\repository\org\slf4j\jul-to-slf4j\1.7.36\jul-to-slf4j-1.7.36.jar = 1652320335323
+C:\Users\User\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar = 1652320335398
+C:\Users\User\.m2\repository\org\yaml\snakeyaml\1.29\snakeyaml-1.29.jar = 1652320335444
+C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.6.7\spring-boot-starter-json-2.6.7.jar = 1652320335442
+C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.2.1\jackson-databind-2.13.2.1.jar = 1652320335647
+C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.2\jackson-annotations-2.13.2.jar = 1652320335642
+C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.2\jackson-core-2.13.2.jar = 1652320335695
+C:\Users\User\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.13.2\jackson-datatype-jdk8-2.13.2.jar = 1652320335726
+C:\Users\User\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.13.2\jackson-datatype-jsr310-2.13.2.jar = 1652320335776
+C:\Users\User\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.13.2\jackson-module-parameter-names-2.13.2.jar = 1652320335959
+C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.6.7\spring-boot-starter-tomcat-2.6.7.jar = 1652320335968
+C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.62\tomcat-embed-core-9.0.62.jar = 1652320336393
+C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.62\tomcat-embed-el-9.0.62.jar = 1652320336102
+C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.62\tomcat-embed-websocket-9.0.62.jar = 1652320336115
+C:\Users\User\.m2\repository\org\springframework\spring-web\5.3.19\spring-web-5.3.19.jar = 1652320336329
+C:\Users\User\.m2\repository\org\springframework\spring-webmvc\5.3.19\spring-webmvc-5.3.19.jar = 1652320336312
+C:\Users\User\.m2\repository\org\springframework\spring-expression\5.3.19\spring-expression-5.3.19.jar = 1652320336404
+C:\Users\User\.m2\repository\org\springframework\boot\spring-boot\2.6.7\spring-boot-2.6.7.jar = 1652320336677
+C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.6.7\spring-boot-autoconfigure-2.6.7.jar = 1652320336766
+C:\Users\User\.m2\repository\org\projectlombok\lombok\1.18.24\lombok-1.18.24.jar = 1652320337886
+C:\Users\User\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar = 1652320337696
+C:\Users\User\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar = 1652320337790
+C:\Users\User\.m2\repository\org\springframework\spring-core\5.3.19\spring-core-5.3.19.jar = 1652320339610
+C:\Users\User\.m2\repository\org\springframework\spring-jcl\5.3.19\spring-jcl-5.3.19.jar = 1652320339721
+C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-security\2.6.7\spring-boot-starter-security-2.6.7.jar = 1661281217406
+C:\Users\User\.m2\repository\org\springframework\spring-aop\5.3.19\spring-aop-5.3.19.jar = 1652320333004
+C:\Users\User\.m2\repository\org\springframework\security\spring-security-config\5.6.3\spring-security-config-5.6.3.jar = 1661281218083
+C:\Users\User\.m2\repository\org\springframework\security\spring-security-core\5.6.3\spring-security-core-5.6.3.jar = 1661281217501
+C:\Users\User\.m2\repository\org\springframework\security\spring-security-crypto\5.6.3\spring-security-crypto-5.6.3.jar = 1661281217583
+C:\Users\User\.m2\repository\org\springframework\security\spring-security-web\5.6.3\spring-security-web-5.6.3.jar = 1661281217987
+C:\Users\User\.m2\repository\io\jsonwebtoken\jjwt-api\0.11.5\jjwt-api-0.11.5.jar = 1661281217845
+I:\Porfolio\Porfolio\BacKEnd\mgb\src\main\java = 1661219287494
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\generated-sources\annotations = 1661286306320
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\apidocs\allclasses-frame.html = 1661286319691
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\apidocs\allclasses-noframe.html = 1661286319692
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\apidocs\constant-values.html = 1661286319463
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\apidocs\deprecated-list.html = 1661286319689
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\apidocs\help-doc.html = 1661286319698
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\apidocs\index-all.html = 1661286319686
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\apidocs\index.html = 1661286319693
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\apidocs\overview-frame.html = 1661286319359
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\apidocs\overview-summary.html = 1661286319696
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\apidocs\overview-tree.html = 1661286319676
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\apidocs\package-list = 1661286319358
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\apidocs\script.js = 1661286319700
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\apidocs\serialized-form.html = 1661286319469
+I:\Porfolio\Porfolio\BacKEnd\mgb\target\apidocs\stylesheet.css = 1661286319699
