@@ -2,9 +2,12 @@
 package com.portfolio.Luis.security.jwt;
 
 import com.portfolio.Luis.security.entity.UsuarioPrincipal;
+import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.SignatureException;
+import io.jsonwebtoken.UnsupportedJwtException;
 import java.util.Date;
 import java.util.logging.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,17 +40,19 @@ public class JwtProvider {
     
     public boolean validateToken(String token){
      try {
-     
+      Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
+      return true;
      }catch (MalformedJwtException e){
       logger.error("token mal formado");
-       }catch (MalformedJwtException e){
-      logger.error("token mal formado");
-       }catch (MalformedJwtException e){
-      logger.error("token mal formado");
-       }catch (MalformedJwtException e){
-      logger.error("token mal formado");
-       }catch (MalformedJwtException e){
-      logger.error("token mal formado");
+       }catch (UnsupportedJwtException e){
+      logger.error("token no soportado");
+       }catch (ExpiredJwtException e){
+      logger.error("token expirado");
+       }catch (IllegalArgumentException e){
+      logger.error("token vacio");
+       }catch (SignatureException e){
+      logger.error("fallo en la firma");
      }
+     return false;
     }
 }
