@@ -2,6 +2,7 @@
 package com.portfolio.Luis.security.entity;
 
 import com.portfolio.Luis.security.enums.RolNombre;
+import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
@@ -10,7 +11,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 
-
+@Entity
 public class Rol {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

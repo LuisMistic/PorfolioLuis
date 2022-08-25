@@ -39,6 +39,7 @@ com\portfolio\Luis\Repository\IHomeRepository.class
 com\portfolio\Luis\Service\ImpPersonaService.class
 com\portfolio\Luis\Interface\IHabilidadesService.class
 com\portfolio\Luis\Repository\IProyectoRepository.class
+com\portfolio\Luis\security\dto\Mensaje.class
 com\portfolio\Luis\Service\ImpProyectoService.class
 com\portfolio\Luis\security\jwt\JwtProvider.class
 com\portfolio\Luis\Controller\EducacionControler.class

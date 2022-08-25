@@ -5,6 +5,7 @@ import com.portfolio.Luis.Entity.Persona;
 import com.portfolio.Luis.Interface.IExperienciaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,19 +27,19 @@ public class ExperienciaController {
         return iexperienciaService.getExperiencia();
 
     }
-
+   /* @PreAuthorize("hasRole('admin')")*/
     @PostMapping("/experiencia/crear")
     public void createExperiencia(@RequestBody Experiencia experiencia) {
         iexperienciaService.saveExperiencia(experiencia);
 
     }
-
+    
     @DeleteMapping("/experiencia/borrar/{id}")
     public void deleteExperiencia(@PathVariable Long id) {
         iexperienciaService.deleteExperiencia(id);
         
     }
-
+    @PreAuthorize("hasRole('admin')")
     @PutMapping("/experiencia/editar/{id}")
     public Experiencia editExperiencia(@PathVariable("id") Long id, @RequestBody Experiencia experiencia) {
         experiencia.setId(id);

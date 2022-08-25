@@ -14,9 +14,9 @@
             <h5 class="">{{habilidades.nombre}}</h5>
             <div class="barra">
                 <div class="progress">
-                    {{habilidades.progreso}}
+                   
                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" attr.style="width:  {{habilidades.progreso}}%"></div>
 
                 </div>
                  <button (click)="Editar(habilidades)" class="btn" style="float: center ;">
