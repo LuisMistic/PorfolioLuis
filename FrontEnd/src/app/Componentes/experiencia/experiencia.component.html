@@ -38,14 +38,13 @@
                     <div *ngFor="let experiencia of experiencias"  class="contsaButton"> 
                         
                         <div class="centrado" >
-                            {{experiencia.id}}<h2 id="multimedia"> {{experiencia.nombre}}   {{experiencia.descripcion}}</h2>
+                            {{experiencia.id}}<h2 id="multimedia"> {{experiencia.nombre}}  </h2> 
+                                
+                                <h5 id="multimedia">{{experiencia.descripcion}}</h5>
                             
-                            <img src="../../../assets/iconos/Recurso 5.png" alt="">
-                            <img src="../../../assets/iconos/Recurso 3.png" alt="">
-                            <img src="../../../assets/iconos/Recurso 6.png" alt="">
-                            <img src="../../../assets/iconos/Recurso 7.png" alt=""><br>
-                            Actualidad
-                        
+                          
+                            {{experiencia.fecha}}
+                             
                         <div class="botonera">
                             
                              <button (click)="Editar(experiencia)" class="btn" style="float: center ;">

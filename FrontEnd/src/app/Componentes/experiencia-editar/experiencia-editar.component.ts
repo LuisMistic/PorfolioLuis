@@ -14,7 +14,7 @@ export class ExperienciaEditarComponent implements OnInit {
   constructor(private route:Router,private service:ExperienciaService) { }
 
   
- experiencia:Experiencia=new Experiencia(0,"","");
+ experiencia:Experiencia=new Experiencia(0,"","","");
 
 ngOnInit() {
     this.Editar();

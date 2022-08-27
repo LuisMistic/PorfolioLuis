@@ -34,6 +34,6 @@ export class ExperienciaComponent implements OnInit {
     this.experiencias=this.experiencias.filter(p=>p!==experiencia);
     alert("Usuario eliminado...");
   })
-  }
+}
 
 }

@@ -29,7 +29,9 @@ public class Experiencia {
     private String descripcion;
 
    
-   
+    @NotNull
+    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+    private String fecha;
     
     
     

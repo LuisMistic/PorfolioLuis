@@ -9,7 +9,7 @@ import { ExperienciaService } from 'src/app/Servicios/experiencia.service';
   styleUrls: ['./experiencia-agregar.component.css']
 })
 export class ExperienciaAgregarComponent implements OnInit {
-experiencia:Experiencia=new Experiencia(0,"","")
+experiencia:Experiencia=new Experiencia(0,"","","")
   constructor(private route: Router, private service:ExperienciaService) { }
 
   ngOnInit() {

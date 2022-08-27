@@ -37,6 +37,8 @@
 .centrado{
    
     text-align: center;
+    border-color: black;
+    border-radius: 50px;
     
 
 }
