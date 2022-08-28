@@ -1,5 +1,6 @@
 com\portfolio\Luis\Service\ImpExperienciaService.class
 com\portfolio\Luis\Entity\Proyecto.class
+util\CreateRoles.class
 com\portfolio\Luis\security\MainSecurity.class
 com\portfolio\Luis\security\enums\RolNombre.class
 com\portfolio\Luis\security\repository\RolRepository.class

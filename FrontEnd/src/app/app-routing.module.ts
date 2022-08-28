@@ -10,7 +10,7 @@ import { ExperienciaComponent } from './Componentes/experiencia/experiencia.comp
 import { HabilidadesAgregarComponent } from './Componentes/habilidades-agregar/habilidades-agregar.component';
 import { HabilidadesEditarComponent } from './Componentes/habilidades-editar/habilidades-editar.component';
 import { HabilidadesComponent } from './Componentes/habilidades/habilidades.component';
-
+import {RegistroComponent} from './auth/registro.component'
 import { HomeComponent } from './Componentes/home/home.component';
 import { LoginComponent } from './Componentes/login/login.component';
 
@@ -19,6 +19,7 @@ import { LoginComponent } from './Componentes/login/login.component';
 const routes: Routes = [
   {path:'', component: HomeComponent},
   {path:'login', component: LoginComponent},
+  {path:'registro', component: RegistroComponent},
   {path:'experienciaAgregar', component: ExperienciaAgregarComponent},
   {path:'editar', component:ExperienciaEditarComponent},
   {path:'editarHome', component: BannerEditarComponent},

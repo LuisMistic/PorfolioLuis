@@ -27,6 +27,7 @@ import { EducacionAgregarComponent } from './Componentes/educacion-agregar/educa
 import { EducacionEditarComponent } from './Componentes/educacion-editar/educacion-editar.component';
 import { HabilidadesAgregarComponent } from './Componentes/habilidades-agregar/habilidades-agregar.component';
 import { HabilidadesEditarComponent } from './Componentes/habilidades-editar/habilidades-editar.component';
+import { RegistroComponent } from './auth/registro.component';
 
 
 
@@ -51,6 +52,7 @@ import { HabilidadesEditarComponent } from './Componentes/habilidades-editar/hab
     BannerAgregarComponent,
     HabilidadesAgregarComponent,
     HabilidadesEditarComponent,
+    RegistroComponent,
     
   ],
   imports: [
