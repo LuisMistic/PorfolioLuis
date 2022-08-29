@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { ToastrService } from "ngx-toastr";
 import { NuevoUsuario } from "../modelo/nuevo-usuario";
 import { AuthService } from "../Servicios/auth.service";
 import { TokenService } from "../Servicios/token.service";
@@ -44,7 +45,7 @@ export class RegistroComponent implements OnInit {
       },
       err => {
         this.errMsj = err.error.mensaje;
-        this.toastr.error(this.errMsj, 'Fail', {
+        this.toastr.error(this.errMsj, 'intenta de nuevo', {
           timeOut: 3000,  positionClass: 'toast-top-center',
         });
         // console.log(err.error.message);

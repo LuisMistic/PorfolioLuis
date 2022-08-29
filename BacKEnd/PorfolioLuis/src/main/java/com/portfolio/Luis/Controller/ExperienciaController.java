@@ -1,7 +1,7 @@
 package com.portfolio.Luis.Controller;
 
 import com.portfolio.Luis.Entity.Experiencia;
-import com.portfolio.Luis.Entity.Persona;
+
 import com.portfolio.Luis.Interface.IExperienciaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,19 +27,21 @@ public class ExperienciaController {
         return iexperienciaService.getExperiencia();
 
     }
-   /* @PreAuthorize("hasRole('admin')")*/
+    
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/experiencia/crear")
     public void createExperiencia(@RequestBody Experiencia experiencia) {
         iexperienciaService.saveExperiencia(experiencia);
 
     }
-    
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/experiencia/borrar/{id}")
     public void deleteExperiencia(@PathVariable Long id) {
         iexperienciaService.deleteExperiencia(id);
         
     }
-    @PreAuthorize("hasRole('admin')")
+   
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/experiencia/editar/{id}")
     public Experiencia editExperiencia(@PathVariable("id") Long id, @RequestBody Experiencia experiencia) {
         experiencia.setId(id);

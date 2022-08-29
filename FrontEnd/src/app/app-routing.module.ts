@@ -13,14 +13,14 @@ import { HabilidadesComponent } from './Componentes/habilidades/habilidades.comp
 import {RegistroComponent} from './auth/registro.component'
 import { HomeComponent } from './Componentes/home/home.component';
 import { LoginComponent } from './Componentes/login/login.component';
-
+import {ProdGuardService as guard} from './guards/prod-guard.service';
 
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
   {path:'login', component: LoginComponent},
   {path:'registro', component: RegistroComponent},
-  {path:'experienciaAgregar', component: ExperienciaAgregarComponent},
+  {path:'experienciaAgregar', component: ExperienciaAgregarComponent, canActivate: [guard],data:{expectedRol:['admin']}},
   {path:'editar', component:ExperienciaEditarComponent},
   {path:'editarHome', component: BannerEditarComponent},
   {path:'Home', component: HomeComponent},

@@ -6,6 +6,7 @@ import com.portfolio.Luis.Interface.IHomeService;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class HomeControler {
     @Autowired IHomeService ihomeService;
-    
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("home/traer")
     public List <Home> getHome(){
         return ihomeService.getHome();
@@ -35,12 +36,13 @@ public class HomeControler {
     ihomeService.saveHome(home);
     
     }
-    
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/home/borrar/{id}")
     public String deleteHome(@PathVariable Long id){
     ihomeService.deleteHome(id);
     return "La persona fue eliminada correctamente";
     }
+     @PreAuthorize("hasRole('ADMIN')")
      @PutMapping("/home/editar/{id}")
     public Home editHome(@PathVariable("id") long id, @RequestBody Home home) {
         home.setId(id);

@@ -15,23 +15,23 @@
                                     <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
                                 </div>
 
-                                <form>
+                                <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
                                     <p>Please login to your account</p>
 
                                     <div class="form-outline mb-4">
-                                        <input type="email" id="form2Example11" class="form-control"
-                                            placeholder="Phone number or email address" />
+                                        <input type="text" name="nombreUsuario" id="nombreUsuario" class="form-control"
+                        [(ngModel)]="nombreUsuario" required>
                                         <label class="form-label" for="form2Example11">Username</label>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <input type="password" id="form2Example22" class="form-control" />
+                                        <input type="password" name="password" id="password" class="form-control"
+                        [(ngModel)]="password" required>
                                         <label class="form-label" for="form2Example22">Password</label>
                                     </div>
 
                                     <div class="text-center pt-1 mb-5 pb-1">
-                                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-                                            type="button">Log
+                                        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Log
                                             in</button>
                                         <a class="text-muted" href="#!">Forgot password?</a>
                                     </div>

@@ -39,7 +39,7 @@ public class Rol {
         return rolNombre;
     }
 
-    public void setRolNombre(RolNombre rolNombre) {
+    public void setRolNombre(@NotNull RolNombre rolNombre) {
         this.rolNombre = rolNombre;
     }
     

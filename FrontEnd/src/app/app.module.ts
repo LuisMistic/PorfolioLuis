@@ -27,9 +27,10 @@ import { EducacionAgregarComponent } from './Componentes/educacion-agregar/educa
 import { EducacionEditarComponent } from './Componentes/educacion-editar/educacion-editar.component';
 import { HabilidadesAgregarComponent } from './Componentes/habilidades-agregar/habilidades-agregar.component';
 import { HabilidadesEditarComponent } from './Componentes/habilidades-editar/habilidades-editar.component';
-import { RegistroComponent } from './auth/registro.component';
-
-
+import { ToastrModule } from 'ngx-toastr';
+import { RegistroComponent} from './auth/registro.component';
+import { interceptorProvider } from './interceptors/prod-interceptor.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { RegistroComponent } from './auth/registro.component';
     BannerAgregarComponent,
     HabilidadesAgregarComponent,
     HabilidadesEditarComponent,
-    RegistroComponent,
+    RegistroComponent
+    
     
   ],
   imports: [
@@ -60,9 +62,12 @@ import { RegistroComponent } from './auth/registro.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    AlifeFileToBase64Module
+    AlifeFileToBase64Module,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
+
   ],
-  providers: [ServiceService,ExperienciaService],
+  providers: [ServiceService,ExperienciaService,interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

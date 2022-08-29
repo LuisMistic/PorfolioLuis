@@ -19,7 +19,9 @@ public class UsuarioPrincipal implements UserDetails{
 
     public UsuarioPrincipal(String nombre, String nombreUsuario, String email, String password, Collection<? extends GrantedAuthority> authorities) {
         this.nombre = nombre;
+        this.nombreUsuario= nombreUsuario; 
         this.email = email;
+        this.password= password;
         this.authorities = authorities;
     }
       public static UsuarioPrincipal build(Usuario usuario) {
@@ -69,16 +71,12 @@ public class UsuarioPrincipal implements UserDetails{
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+  
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+   
     
 }

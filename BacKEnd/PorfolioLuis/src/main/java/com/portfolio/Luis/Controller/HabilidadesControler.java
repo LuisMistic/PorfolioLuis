@@ -4,6 +4,7 @@ import com.portfolio.Luis.Entity.Habilidades;
 import com.portfolio.Luis.Interface.IHabilidadesService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,18 +27,18 @@ public class HabilidadesControler {
         return ihabilidadesService.getHabilidades();
 
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/habilidades/crear")
     public void createHabilidades(@RequestBody Habilidades habilidades) {
         ihabilidadesService.saveHabilidades(habilidades);
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/habilidades/borrar/{id}")
     public String deleteHabilidades(@PathVariable Long id) {
         ihabilidadesService.deleteHabilidades(id);
         return "La persona fue eliminada correctamente";
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/habilidades/editar/{id}")
     public Habilidades editHabilidades(@PathVariable("id") long id, @RequestBody Habilidades habilidades) {
         habilidades.setId(id);

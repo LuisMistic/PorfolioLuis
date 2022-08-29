@@ -15,6 +15,9 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
 
+
+
+
 @Component
 public class JwtProvider {
     private final static Logger logger = LoggerFactory.getLogger(JwtProvider.class);
@@ -26,7 +29,7 @@ public class JwtProvider {
     private int expiration;
 
     public String generateToken(Authentication authentication){
-        UsuarioPrincipal usuarioPrincipal = (UsuarioPrincipal) authentication.getPrincipal();
+        UsuarioPrincipal usuarioPrincipal = (UsuarioPrincipal) authentication.getPrincipal ();
         return Jwts.builder().setSubject(usuarioPrincipal.getUsername())
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(new Date().getTime() + expiration * 1000))
@@ -35,22 +38,22 @@ public class JwtProvider {
     }
 
     public String getNombreUsuarioFromToken(String token){
-        return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody().getSubject();
-    }
+    return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody().getSubject();
+            }
 
     public boolean validateToken(String token){
         try {
             Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
             return true;
-        }catch (MalformedJwtException e){
+        }catch (MalformedJwtException e) {
             logger.error("token mal formado");
-        }catch (UnsupportedJwtException e){
+        }catch (UnsupportedJwtException e) {
             logger.error("token no soportado");
-        }catch (ExpiredJwtException e){
+        }catch (ExpiredJwtException e) {
             logger.error("token expirado");
-        }catch (IllegalArgumentException e){
-            logger.error("token vacío");
-        }catch (SignatureException e){
+        }catch (IllegalArgumentException e) {
+            logger.error("token vacio");
+        }catch (SignatureException e) {
             logger.error("fail en la firma");
         }
         return false;
