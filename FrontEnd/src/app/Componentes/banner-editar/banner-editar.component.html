@@ -16,19 +16,27 @@
         </div>
         <div class="form-group">
           <label for="">Apellido</label>
-          <input 
-           [(ngModel)]="home.apellido"
-           name="descripcion"
-           type="text" class="form-control" />
+          <input
+            [(ngModel)]="home.apellido"
+            name="descripcion"
+            type="text"
+            class="form-control"
+          />
         </div>
         <div class="form-group">
           <label for="">Imagen</label>
-          <input 
-           alife-file-to-base64 (onFileChanged)="obtener($event)"
-           name="img" accept="image/*"
-           type="file" class="form-control" />
+          <input
+            alife-file-to-base64
+            (onFileChanged)="obtener($event)"
+            name="img"
+            accept="image/*"
+            type="file"
+            class="form-control"
+          />
         </div>
-        <button (click)="Actualizar(home)" class="btn btn-danger">Actualizar</button>
+        <button (click)="Actualizar(home)" class="btn btn-danger">
+          Actualizar
+        </button>
       </form>
     </div>
   </div>

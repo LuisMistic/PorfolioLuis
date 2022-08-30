@@ -22,7 +22,7 @@ public class PersonaControler {
     @Autowired
     IPersonaService ipersonaService;
 
-    @PreAuthorize("hasRole('ADMIN')")
+    
     @GetMapping("personas/traer")
     public List<Persona> getPersona() {
         return ipersonaService.getPersona();

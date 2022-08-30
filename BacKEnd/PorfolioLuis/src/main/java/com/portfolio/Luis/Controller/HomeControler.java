@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class HomeControler {
     @Autowired IHomeService ihomeService;
-    @PreAuthorize("hasRole('ADMIN')")
+    
     @GetMapping("home/traer")
     public List <Home> getHome(){
         return ihomeService.getHome();

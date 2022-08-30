@@ -1,52 +1,83 @@
-
 <div id="inicio" padding="top"></div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 fixed-top">
-    <div class="container">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link active" class="btn btn-outline-success" type="submit" href="#inicio"><i class="fa-solid fa-house"></i>Inicio</a>
-            </li>
-        </ul>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent">
-            <span style="color: white"><i class="fas fa-align-justify"></i></span>
+  <div class="container">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          class="btn btn-outline-success"
+          type="submit"
+          href="#inicio"
+          ><i class="fa-solid fa-house"></i>Inicio</a
+        >
+      </li>
+    </ul>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+    >
+      <span style="color: white"><i class="fas fa-align-justify"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <a
+          class="nav-link active"
+          class="btn btn-outline-success"
+          type="submit"
+          href="#experiencia"
+          id="navbarSupportedContent"
+          >Experiencia</a
+        >
+
+        <a
+          class="nav-link active"
+          class="btn btn-outline-success"
+          type="submit"
+          href="#visual"
+          id="navbarSupportedContent"
+          >Audiovisual</a
+        >
+
+        <a
+          class="nav-link active"
+          class="btn btn-outline-success"
+          type="submit"
+          href="#edu"
+          id="navbarSupportedContent"
+          >Educacion</a
+        >
+
+        <a class="btn btn-outline-success" type="submit" href="#habilidades"
+          >Habilidades</a
+        >
+
+        <a class="btn btn-outline-success" href="#contacto">Contacto</a>
+
+        
+      </ul>
+      <button
+          
+          class="btn btn-outline-success"
+          type="submit"
+          *ngIf="!islogged"
+          href="#"
+          (click)="login()"
+        ><i class="fa-solid fa-right-to-bracket"></i>
+          Iniciar Sesión
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-              
-                    <a class="nav-link active" class="btn btn-outline-success" type="submit" href="#experiencia"
-                        id="navbarSupportedContent">Experiencia</a>
-
-               
-                    <a class="nav-link active" class="btn btn-outline-success" type="submit" href="#visual"
-                        id="navbarSupportedContent">Audiovisual</a>
-               
-               
-                    <a class="nav-link active" class="btn btn-outline-success" type="submit" href="#edu"
-                        id="navbarSupportedContent">Educacion</a>
-               
-               
-                    <a class="btn btn-outline-success" type="submit" href="#habilidades">Habilidades</a>
-              
-
-               
-                    <a class="btn btn-outline-success "  href="#contacto">Contacto</a >
-             
-
-           
-            
-            
-
-
-                <button  class="btn btn-outline-success " type="submit" *ngIf="!islogged" href="#"(click)="login()">Iniciar Sesión</button>
-                <button  class="btn btn-outline-success " type="submit" *ngIf="islogged" (click)="onLogOut()">Cerrar Sesión</button>
-                
-           
-</ul>
-            <img class="logo" src="../../../assets/imagenes/APLogo.png" width="10%">
-
-        </div>
+         
+        <button
+          class="btn btn-outline-success"
+          type="submit"
+          *ngIf="islogged"
+          (click)="onLogOut()"
+        ><i class="fa-solid fa-phone-arrow-up-right"></i>
+          Cerrar Sesión
+        </button>
+      <img class="logo" src="../../../assets/imagenes/APLogo.png" width="10%" />
     </div>
+  </div>
 </nav>

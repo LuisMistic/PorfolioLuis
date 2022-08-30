@@ -1,44 +1,49 @@
 <div class="edu">
-
-    <h1 id="edu">
-        EDUCACION
-        
-    </h1>
-    <div class="row">
+  <h1 id="edu">EDUCACION</h1>
+  <div class="row">
     <div class="col-12">
-    <button (click)="EducacionAgregar()" *ngIf="islogged" class="btn" style="float: center ;"><i class="fa fa-id-badge"
-                            aria-hidden="true"></i></button>
-</div></div>
-<br>
+      <button
+        (click)="EducacionAgregar()"
+        *ngIf="islogged"
+        class="btn"
+        style="float: center"
+      >
+        <i class="fa fa-id-badge" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+  <br />
 
-            
-                
-  <div *ngFor="let educacion of educacions"  class="contsaButton"> 
-                        
-                        <div class="centrado" >
-                            <div *ngIf="islogged">{{educacion.id}}</div><h2 id="multimedia"> {{educacion.nombre}}   </h2>
-                    <div class="col-12">
-                        <h2>{{educacion.descripcion}}</h2>
-                        <h3>Yo programo</h3>
-                        <h4>
-                            {{educacion.fecha}}
-                        </h4>
-                    
-                    
+  <div *ngFor="let educacion of educacions" class="contsaButton">
+    <div class="centrado">
+      <h2 id="multimedia">{{ educacion.nombre }}</h2>
+      <div class="col-12">
+        <h2>{{ educacion.descripcion }}</h2>
 
-                 <div class="botonera">
-                            
-                             <button (click)="Editar(educacion)" *ngIf="islogged" class="btn" style="float: center ;">
-                                <i class="fa fa-pencil" aria-hidden="true"></i></button>
-                             <button (click)="Borrar(educacion)" *ngIf="islogged"class="btn" style="float: center ;"><i class="fa fa-trash-o"
-                                    aria-hidden="true"></i></button>
-                        </div>
-                        </div>
-                        </div>
+        <h4>
+          {{ educacion.fecha }}
+        </h4>
+
+        <div class="botonera">
+          <button
+            (click)="Editar(educacion)"
+            *ngIf="islogged"
+            class="btn"
+            style="float: center"
+          >
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </button>
+          <button
+            (click)="Borrar(educacion)"
+            *ngIf="islogged"
+            class="btn"
+            style="float: center"
+          >
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-                <br><br>
-            
-
-
-            
+<br /><br />

@@ -14,22 +14,29 @@
             class="form-control"
           />
         </div>
+
         <div class="form-group">
           <label for="">Educacion</label>
-          <input 
-           [(ngModel)]="educacions.descripcion"
-           name="descripcion"
-           type="text" class="form-control" />
+          <input
+            [(ngModel)]="educacions.descripcion"
+            name="descripcion"
+            type="text"
+            class="form-control"
+          />
         </div>
         <div class="from-group">
-            <label for="">fecha</label>
-            <input 
+          <label for="">fecha</label>
+          <input
             [(ngModel)]="educacions.fecha"
-            name="descripcion"
-            type="text" class="form-control" />
+            name="fecha"
+            type="text"
+            class="form-control"
+          />
         </div>
 
-        <button (click)="Actualizar(educacions)" class="btn btn-danger">Actualizar</button>
+        <button (click)="Actualizar(educacions)" class="btn btn-danger">
+          Actualizar
+        </button>
       </form>
     </div>
   </div>

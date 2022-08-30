@@ -6,27 +6,25 @@
     <div class="card-body">
       <form action="">
         <div class="from-group">
-          {{habilidad.id}}
+          {{ habilidad.id }}
           <label for="">Habilidad:</label>
           <input
-          [(ngModel)]="habilidad.nombre"
-          name="nombre"
-          type="text"
-          class="form-control"
+            [(ngModel)]="habilidad.nombre"
+            name="nombre"
+            type="text"
+            class="form-control"
           />
-          
         </div>
         <div class="from-group">
-            <label for="">progreso</label>
-            <input 
+          <label for="">progreso</label>
+          <input
             [(ngModel)]="habilidad.progreso"
-            type="text" class="form-control" />
+            type="text"
+            class="form-control"
+          />
         </div>
-        
-
-    </form>
-        <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
-        
+      </form>
+      <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
     </div>
-</div>
+  </div>
 </div>

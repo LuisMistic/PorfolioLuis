@@ -6,7 +6,7 @@
     <div class="card-body">
       <form action="">
         <div class="from-group">
-          {{home.id}}
+          {{ home.id }}
           <label for="">Nombre:</label>
           <input
             [(ngModel)]="home.nombre"
@@ -14,17 +14,19 @@
             type="text"
             class="form-control"
           />
-           
         </div>
         <div class="from-group">
           <label for="">Apellido</label>
-          <input 
-           [(ngModel)]="home.img" alife-file-to-base64 (onFileChanged)="obtener($event)"
-           name="descripcion"
-           type="text" class="form-control" />
+          <input
+            [(ngModel)]="home.img"
+            alife-file-to-base64
+            (onFileChanged)="obtener($event)"
+            name="descripcion"
+            type="text"
+            class="form-control"
+          />
         </div>
         <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
-       
       </form>
     </div>
   </div>

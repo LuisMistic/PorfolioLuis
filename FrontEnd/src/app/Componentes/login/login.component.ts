@@ -12,7 +12,7 @@ import { TokenService } from 'src/app/Servicios/token.service';
 })
 export class LoginComponent implements OnInit {
 
- isLogged = false;
+  isLogged = false;
   isLoginFail = false;
   loginUsuario: LoginUsuario;
   nombreUsuario: string;
@@ -58,8 +58,8 @@ export class LoginComponent implements OnInit {
         this.isLogged = false;
         this.isLogged= true;
         this.errMsj = err.error.message;
-       // console.log(err.error.message);
-        this.toastr.error(this.errMsj, 'Fail', {
+        console.log(err.error.message);
+        this.toastr.error(this.errMsj, 'Error', {
           timeOut: 3000,  positionClass: 'toast-top-center',
         });
          
