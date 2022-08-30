@@ -4,7 +4,7 @@
     <div class="container">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link active" class="btn btn-outline-success" type="submit" href="#inicio">Inicio</a>
+                <a class="nav-link active" class="btn btn-outline-success" type="submit" href="#inicio"><i class="fa-solid fa-house"></i>Inicio</a>
             </li>
         </ul>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -40,8 +40,9 @@
             
 
 
-                <button  class="btn btn-outline-success " type="submit" href="#"(click)="login()">Login</button>
-
+                <button  class="btn btn-outline-success " type="submit" *ngIf="!islogged" href="#"(click)="login()">Iniciar Sesión</button>
+                <button  class="btn btn-outline-success " type="submit" *ngIf="islogged" (click)="onLogOut()">Cerrar Sesión</button>
+                
            
 </ul>
             <img class="logo" src="../../../assets/imagenes/APLogo.png" width="10%">

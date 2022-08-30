@@ -34,7 +34,11 @@ export class LoginComponent implements OnInit {
       this.roles = this.tokenService.getAuthorities();
     }
   }
+  Registro(){
 
+   this.router.navigate(['registro'])
+
+ }
   onLogin(): void {
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
     this.authService.login(this.loginUsuario).subscribe(
@@ -52,11 +56,13 @@ export class LoginComponent implements OnInit {
       },
       err => {
         this.isLogged = false;
+        this.isLogged= true;
         this.errMsj = err.error.message;
+       // console.log(err.error.message);
         this.toastr.error(this.errMsj, 'Fail', {
           timeOut: 3000,  positionClass: 'toast-top-center',
         });
-        // console.log(err.error.message);
+         
       }
     );
   }

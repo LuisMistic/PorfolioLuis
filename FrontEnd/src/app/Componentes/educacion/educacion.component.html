@@ -6,7 +6,7 @@
     </h1>
     <div class="row">
     <div class="col-12">
-    <button (click)="EducacionAgregar()"class="btn" style="float: center ;"><i class="fa fa-id-badge"
+    <button (click)="EducacionAgregar()" *ngIf="islogged" class="btn" style="float: center ;"><i class="fa fa-id-badge"
                             aria-hidden="true"></i></button>
 </div></div>
 <br>
@@ -16,7 +16,7 @@
   <div *ngFor="let educacion of educacions"  class="contsaButton"> 
                         
                         <div class="centrado" >
-                            {{educacion.id}}<h2 id="multimedia"> {{educacion.nombre}}   </h2>
+                            <div *ngIf="islogged">{{educacion.id}}</div><h2 id="multimedia"> {{educacion.nombre}}   </h2>
                     <div class="col-12">
                         <h2>{{educacion.descripcion}}</h2>
                         <h3>Yo programo</h3>
@@ -28,9 +28,9 @@
 
                  <div class="botonera">
                             
-                             <button (click)="Editar(educacion)" class="btn" style="float: center ;">
+                             <button (click)="Editar(educacion)" *ngIf="islogged" class="btn" style="float: center ;">
                                 <i class="fa fa-pencil" aria-hidden="true"></i></button>
-                             <button (click)="Borrar(educacion)"class="btn" style="float: center ;"><i class="fa fa-trash-o"
+                             <button (click)="Borrar(educacion)" *ngIf="islogged"class="btn" style="float: center ;"><i class="fa fa-trash-o"
                                     aria-hidden="true"></i></button>
                         </div>
                         </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Home } from 'src/app/modelo/home.model';
 import { HomeService } from 'src/app/Servicios/home.service';
+import { TokenService } from 'src/app/Servicios/token.service';
 
 
 @Component({
@@ -14,18 +15,27 @@ import { HomeService } from 'src/app/Servicios/home.service';
 export class BannerComponent implements OnInit {
   //persona: Persona = new Persona ("","","");
   homee:Home []=[];
-  constructor(public homeService: HomeService, private route: Router) {}
+  islogged = false;
+  constructor(public homeService: HomeService, private route: Router,private tokenService: TokenService) {}
 
   ngOnInit(): void {
     this.homeService.getHome().subscribe(data => {this.homee = data;
       console.log(data);
     })
-    
+    if (this.tokenService.getToken()){
+      this.islogged = true;
+    }else {
+      this.islogged = false;
+    }
+  }
+  onLogOut(): void {
+    this.tokenService.logOut();
+    window.location.reload();
   }
   HomeAgregar(){
     this.route.navigate(['homeAgregar'])
   }
-
+   
    Editar(home:Home):void{
   localStorage.setItem("id", home.id.toString());
   this.route.navigate(["editarHome"]);
@@ -37,5 +47,6 @@ export class BannerComponent implements OnInit {
     alert("Usuario eliminado...");
   })
   }
+  }
+  
 
-}

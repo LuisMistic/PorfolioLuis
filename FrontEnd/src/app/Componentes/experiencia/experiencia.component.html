@@ -14,7 +14,7 @@
     <div class="row">
                 <div class="col-12 ">
                     
-                    <button (click)="ExperienciaAgregar()"class="btn" style="float: center ;"><i class="fa fa-id-badge"
+                    <button (click)="ExperienciaAgregar()" *ngIf="islogged" class="btn" style="float: center ;"><i class="fa fa-id-badge"
                             aria-hidden="true"></i></button>
                             
                         
@@ -38,7 +38,7 @@
                     <div *ngFor="let experiencia of experiencias"  class="contsaButton"> 
                         
                         <div class="centrado" >
-                            {{experiencia.id}}<h2 id="multimedia"> {{experiencia.nombre}}  </h2> 
+                            <h2 id="multimedia"> {{experiencia.nombre}}  </h2> 
                                 
                                 <h5 id="multimedia">{{experiencia.descripcion}}</h5>
                             
@@ -47,9 +47,9 @@
                              
                         <div class="botonera">
                             
-                             <button (click)="Editar(experiencia)" class="btn" style="float: center ;">
+                             <button (click)="Editar(experiencia)" *ngIf="islogged" class="btn" style="float: center ;">
                                 <i class="fa fa-pencil" aria-hidden="true"></i></button>
-                            <button (click)="Borrar(experiencia)"class="btn" style="float: center ;"><i class="fa fa-trash-o"
+                            <button (click)="Borrar(experiencia)" *ngIf="islogged" class="btn" style="float: center ;"><i class="fa fa-trash-o"
                                     aria-hidden="true"></i></button>
                         </div>
                         </div>

@@ -31,6 +31,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { RegistroComponent} from './auth/registro.component';
 import { interceptorProvider } from './interceptors/prod-interceptor.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { LoginRegistroComponent } from './login-registro/login-registro.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BannerAgregarComponent,
     HabilidadesAgregarComponent,
     HabilidadesEditarComponent,
-    RegistroComponent
+    RegistroComponent,
+    LoginRegistroComponent
     
     
   ],

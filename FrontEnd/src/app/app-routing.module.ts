@@ -14,24 +14,25 @@ import {RegistroComponent} from './auth/registro.component'
 import { HomeComponent } from './Componentes/home/home.component';
 import { LoginComponent } from './Componentes/login/login.component';
 import {ProdGuardService as guard} from './guards/prod-guard.service';
+import { LoginRegistroComponent } from './login-registro/login-registro.component';
 
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
   {path:'login', component: LoginComponent},
-  {path:'registro', component: RegistroComponent},
+  {path:'registro', component: LoginRegistroComponent},
   {path:'experienciaAgregar', component: ExperienciaAgregarComponent, canActivate: [guard],data:{expectedRol:['admin']}},
-  {path:'editar', component:ExperienciaEditarComponent},
-  {path:'editarHome', component: BannerEditarComponent},
+  {path:'editar', component:ExperienciaEditarComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }  },
+  {path:'editarHome', component: BannerEditarComponent, canActivate: [guard],data: {expectedRol:['admin', 'user'] } },
   {path:'Home', component: HomeComponent},
   
   {path:'Experiencia', component: ExperienciaComponent},
   {path: 'Educacion', component: EducacionComponent},
-  {path:'EducacionAgregar', component: EducacionAgregarComponent},
-  {path:'EducacionEditar', component:EducacionEditarComponent},
+  {path:'EducacionAgregar', component: EducacionAgregarComponent, canActivate: [guard],data:{expectedRol:['admin']}},
+  {path:'EducacionEditar', component:EducacionEditarComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }},
   {path:'habilidadesComponent', component: HabilidadesComponent},
-  {path:'HabilidadesAgregar', component: HabilidadesAgregarComponent},
-  {path:'HabilidadesEditar', component: HabilidadesEditarComponent},
+  {path:'HabilidadesAgregar', component: HabilidadesAgregarComponent, canActivate: [guard],data:{expectedRol:['admin']}},
+  {path:'HabilidadesEditar', component: HabilidadesEditarComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }},
 ];
 
 @NgModule({
