@@ -28,6 +28,10 @@ ngOnInit() {
     
   })
  }
+ Cancelar(){
+      this.route.navigate(['Home'])
+    }
+    
 Actualizar(home:Home){
   this.service.updateHome(home)
   .subscribe(data=>{this.home=data;

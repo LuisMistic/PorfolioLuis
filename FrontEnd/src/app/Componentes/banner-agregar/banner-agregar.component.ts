@@ -20,9 +20,14 @@ export class BannerAgregarComponent implements OnInit {
     .subscribe(data =>{
       alert("Se agrego con Exito...!!!");
       this.route.navigate(['Home']);
-    })
-    
+    })   
   }
+
+  Cancelar(){
+      this.route.navigate(['Home'])
+    }
+
+
    obtener(e:any){
   this.home.img=e[0].base64;
  }
