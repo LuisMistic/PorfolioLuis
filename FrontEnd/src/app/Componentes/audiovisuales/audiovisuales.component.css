@@ -46,3 +46,25 @@
   padding: 0px;
 
 }
+
+.figure {
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 100px;
+    border: solid 5px rgb(130, 130, 129);
+    backdrop-filter: blur(50px);
+}
+
+/*BOTONES Y ESTILOS*/
+/* centrado 
+ display: flex;
+ flex-direcction: column;  (centrado)
+ justify-content: center;
+ align-itens: center;
+ min-h
+*/
+video {
+
+    width: 80%;
+    margin: auto;
+    display: block;
+}

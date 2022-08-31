@@ -1,18 +1,52 @@
 import { Component, OnInit } from '@angular/core';
-import { Persona } from 'src/app/modelo/Persona';
-import { ServiceService } from 'src/app/Servicios/service.service';
+import { Router } from '@angular/router';
+import { Home } from 'src/app/modelo/home.model';
+import { HomeService } from 'src/app/Servicios/home.service';
+import { TokenService } from 'src/app/Servicios/token.service';
+
 
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.css']
 })
+
+
 export class BannerComponent implements OnInit {
-   personas:Persona[] = [];
-  constructor() { }
+  //persona: Persona = new Persona ("","","");
+  homee:Home []=[];
+  islogged = false;
+  constructor(public homeService: HomeService, private route: Router,private tokenService: TokenService) {}
 
   ngOnInit(): void {
-    
+    this.homeService.getHome().subscribe(data => {this.homee = data;
+      console.log(data);
+    })
+    if (this.tokenService.getToken()){
+      this.islogged = true;
+    }else {
+      this.islogged = false;
+    }
   }
- 
-}
+  onLogOut(): void {
+    this.tokenService.logOut();
+    window.location.reload();
+  }
+  HomeAgregar(){
+    this.route.navigate(['homeAgregar'])
+  }
+   
+   Editar(home:Home):void{
+  localStorage.setItem("id", home.id.toString());
+  this.route.navigate(["editarHome"]);
+ }
+  Borrar(home:Home){
+  this.homeService.deleteHome(home)
+  .subscribe(data=>{
+    this.homee=this.homee.filter(p=>p!==home);
+    alert("Usuario eliminado...");
+  })
+  }
+  }
+  
+

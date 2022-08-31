@@ -1,4 +1,6 @@
-* {}
+* {
+    align-items: center;
+}
 
 .contsaButton {
     cursor: pointer;
@@ -21,7 +23,15 @@
     box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
     border: 5px;
 }
+.educacion {
+    background-color: rgb(255, 228, 188);
+    padding: 0px;
+    margin: 0px 0 0 -0px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
 
+
+}
 
 .contsa {
     text-align: center;
@@ -36,5 +46,13 @@
 
     box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.2);
     padding: 20px;
+
+}
+.col-12 {
+    text-align: center;
+
+}
+.centrado{
+text-align: center;
 
 }

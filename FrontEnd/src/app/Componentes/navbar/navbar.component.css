@@ -1,29 +1,32 @@
 * {
-
+    
     background-color: rgba(39, 35, 35, 0.808);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     color: rgb(241, 236, 236);
+    padding: 5px; 
+    padding-left: ;
+}
+.body {background-color: black;}
+.negro{
+   background-color:  rgba(39, 35, 35, 0.808);
 }
 
+.container{ 
+background-color: rgba(0, 0, 0, 0.808);
+}
+.navbar {
+background-color: rgba(0, 0, 0, 0.808);
+}
 
-
-.nav-item {
-
+.top{
     background-color: rgba(39, 35, 35, 0.808);
 }
 
 
-ul {
-    background-color: rgb(31, 29, 29);
-    padding-top: px;
-
-    text-align: center;
+.d-flex {
+    align-items: center;
+    justify-content: center;
 }
-
-.buton {
-    text-align: r;
-}
-
 
 /*desoarecer menu
 @media (width:500px) {
