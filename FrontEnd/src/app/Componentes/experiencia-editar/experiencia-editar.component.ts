@@ -35,4 +35,7 @@ Actualizar(experiencia:Experiencia){
     this.route.navigate(['Home'])
   })
 }
+Cancelar(){
+      this.route.navigate(['Home'])
+    }
 }

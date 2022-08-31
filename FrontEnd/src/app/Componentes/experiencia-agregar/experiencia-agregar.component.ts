@@ -24,6 +24,9 @@ experiencia:Experiencia=new Experiencia(0,"","","")
      alert("Se agrego con Exito...!!!");
   
 }
+Cancelar(){
+      this.route.navigate(['Home'])
+    }
   }
  
 

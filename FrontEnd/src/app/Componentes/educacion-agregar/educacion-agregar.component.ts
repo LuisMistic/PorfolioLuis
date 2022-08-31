@@ -15,6 +15,7 @@ export class EducacionAgregarComponent implements OnInit {
 
   ngOnInit() {
   }
+  
   Guardar(){
     this.service.createEducacion(this.educacions)
     .subscribe(data =>{
@@ -23,5 +24,7 @@ export class EducacionAgregarComponent implements OnInit {
     })
     
   }
-
+Cancelar(){
+      this.route.navigate(['Home'])
+    }
 }

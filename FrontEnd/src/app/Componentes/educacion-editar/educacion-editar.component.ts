@@ -35,6 +35,9 @@ Actualizar(educacions:Educacion){
     this.route.navigate(['Home'])
   })
 }
+Cancelar(){
+      this.route.navigate(['Home'])
+    }
 }
 
 

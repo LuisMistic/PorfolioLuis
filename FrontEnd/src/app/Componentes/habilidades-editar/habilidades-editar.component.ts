@@ -34,5 +34,7 @@ Actualizar(habilidad:Habilidades){
     this.route.navigate(['Home'])
   })
 }
-
+Cancelar(){
+      this.route.navigate(['Home'])
+    }
 }

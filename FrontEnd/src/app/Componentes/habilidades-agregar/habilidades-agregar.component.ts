@@ -23,5 +23,7 @@ export class HabilidadesAgregarComponent implements OnInit {
     })
     
   }
-
+Cancelar(){
+      this.route.navigate(['Home'])
+    }
 }

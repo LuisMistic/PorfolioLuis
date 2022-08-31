@@ -16,3 +16,8 @@ h3 {
     box-shadow: 7px 4px 15px rgba(0, 0, 0, 0.6);
 
 }
+
+.row{
+
+    text-emphasis-color: black;
+}
