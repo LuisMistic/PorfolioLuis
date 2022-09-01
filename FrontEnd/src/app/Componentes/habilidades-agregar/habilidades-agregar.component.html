@@ -27,6 +27,17 @@
             class="form-control"
           />
         </div>
+        <div class="from-group">
+          <label for="">Imagen</label>
+          <input
+            [(ngModel)]="habilidad.img"
+            alife-file-to-base64
+            (onFileChanged)="obtener($event)"
+            name="descripcion"
+            type="file"
+            class="form-control"
+          />
+        </div>
       </form>
       
     </div>

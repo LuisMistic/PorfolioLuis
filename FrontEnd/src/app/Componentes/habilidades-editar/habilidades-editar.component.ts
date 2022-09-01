@@ -13,7 +13,7 @@ export class HabilidadesEditarComponent implements OnInit {
   constructor(private route:Router,private service:HabilidadesService) { }
 
   
- habilidad:Habilidades=new Habilidades(0,"","",);
+ habilidad:Habilidades=new Habilidades(0,"","","");
 
 ngOnInit() {
     this.Editar();
@@ -37,4 +37,7 @@ Actualizar(habilidad:Habilidades){
 Cancelar(){
       this.route.navigate(['Home'])
     }
+    obtener(e:any){
+  this.habilidad.img=e[0].base64;
+ }
 }

@@ -47,6 +47,10 @@ export class BannerComponent implements OnInit {
     alert("Usuario eliminado...");
   })
   }
+  PersonaAgregar(){
+  this.route.navigate(['bannerAgregar'])
+
+  }
   }
   
 

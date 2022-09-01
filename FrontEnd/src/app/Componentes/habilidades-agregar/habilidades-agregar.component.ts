@@ -10,7 +10,7 @@ import { HabilidadesService } from 'src/app/Servicios/habilidades.service';
 })
 export class HabilidadesAgregarComponent implements OnInit {
 
-  habilidad:Habilidades=new Habilidades(0,"","",)
+  habilidad:Habilidades=new Habilidades(0,"","","")
   constructor(private route: Router, private service:HabilidadesService) { }
 
   ngOnInit() {
@@ -26,4 +26,7 @@ export class HabilidadesAgregarComponent implements OnInit {
 Cancelar(){
       this.route.navigate(['Home'])
     }
+    obtener(e:any){
+  this.habilidad.img=e[0].base64;
+ }
 }

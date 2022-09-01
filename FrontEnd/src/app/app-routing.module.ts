@@ -15,6 +15,7 @@ import { HomeComponent } from './Componentes/home/home.component';
 import { LoginComponent } from './Componentes/login/login.component';
 import {ProdGuardService as guard} from './guards/prod-guard.service';
 import { LoginRegistroComponent } from './login-registro/login-registro.component';
+import { BannerAgregarComponent } from './Componentes/banner-agregar/banner-agregar.component';
 
 
 const routes: Routes = [
@@ -22,17 +23,18 @@ const routes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'registro', component: LoginRegistroComponent},
   {path:'experienciaAgregar', component: ExperienciaAgregarComponent, canActivate: [guard],data:{expectedRol:['admin']}},
-  {path:'editar', component:ExperienciaEditarComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }  },
-  {path:'editarHome', component: BannerEditarComponent, canActivate: [guard],data: {expectedRol:['admin', 'user'] } },
+  {path:'editar', component:ExperienciaEditarComponent, canActivate: [guard], data: { expectedRol: ['admin'] }  },
+  {path:'editarHome', component: BannerEditarComponent, canActivate: [guard],data: {expectedRol:['admin' ] } },
   {path:'Home', component: HomeComponent},
-  
+  {path: 'bannerAgregar', component:BannerAgregarComponent, canActivate: [guard],data:{expectedRol:['admin']}},
   {path:'Experiencia', component: ExperienciaComponent},
   {path: 'Educacion', component: EducacionComponent},
   {path:'EducacionAgregar', component: EducacionAgregarComponent, canActivate: [guard],data:{expectedRol:['admin']}},
-  {path:'EducacionEditar', component:EducacionEditarComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }},
+  {path:'EducacionEditar', component:EducacionEditarComponent, canActivate: [guard], data: { expectedRol: ['admin'] }},
   {path:'habilidadesComponent', component: HabilidadesComponent},
   {path:'HabilidadesAgregar', component: HabilidadesAgregarComponent, canActivate: [guard],data:{expectedRol:['admin']}},
-  {path:'HabilidadesEditar', component: HabilidadesEditarComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] }},
+  {path:'HabilidadesEditar', component: HabilidadesEditarComponent, canActivate: [guard], data: { expectedRol: ['admin'] }},
+  {path: '**', redirectTo:'', pathMatch: 'full'}
 ];
 
 @NgModule({
