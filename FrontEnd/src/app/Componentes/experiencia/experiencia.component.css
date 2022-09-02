@@ -1,3 +1,5 @@
+
+
 .fondo {
     margin-top: 01%;
     background-color: rgb(246, 252, 255);
@@ -15,8 +17,8 @@
     border: 1px solid;
     border-color: rgb(225, 226, 226);
     border-radius: 30px;
-   
-    padding: 20px;
+    
+    padding: 50px;
     
     transition: background-position .2s ease;
     background: linear-gradient(to right, rgb(250, 237, 215) 50%, rgb(199, 233, 190) 50%) no-repeat left / 200%;
@@ -26,7 +28,7 @@
 
     background-position: right;
 
-    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6); 
+    box-shadow: 8px 7px 25px rgba(0, 0, 0, 0.6); 
     border: 5px;
 }
 
@@ -38,7 +40,7 @@
 .centrado{
    
     text-align: center;
-    border-color: black;
+    border-color: black 20px;
     border-radius: 50px;
     
 
