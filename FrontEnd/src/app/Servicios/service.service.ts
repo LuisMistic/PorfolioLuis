@@ -9,7 +9,8 @@ import { Persona } from '../modelo/Persona.model';
 })
 export class ServiceService {
 
-   URL='https://backentluis.herokuapp.com/personas';
+   URL='https://porfolioluis.onrender.com/personas';
+  //  URL = 'http://localhost:8080/personas';
 
      constructor(private http: HttpClient) { }
      

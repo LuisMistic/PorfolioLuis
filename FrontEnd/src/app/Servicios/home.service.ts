@@ -8,7 +8,8 @@ import { Home } from '../modelo/home.model';
 export class HomeService {
 
  
-URL='https://backentluis.herokuapp.com/home';
+URL='https://porfolioluis.onrender.com/home';
+// URL = 'http://localhost:8080/home';
 
      constructor(private http: HttpClient) { }
      

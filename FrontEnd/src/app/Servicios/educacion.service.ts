@@ -9,7 +9,8 @@ import { Educacion } from '../modelo/educacion.model';
 export class EducacionService {
 
  
-URL='https://backentluis.herokuapp.com/educacion';
+URL='https://porfolioluis.onrender.com/educacion';
+//  URL = 'http://localhost:8080/educacion';
 
      constructor(private http: HttpClient) { }
      
