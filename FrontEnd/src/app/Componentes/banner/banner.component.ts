@@ -14,9 +14,12 @@ import { TokenService } from 'src/app/Servicios/token.service';
 
 export class BannerComponent implements OnInit {
   //persona: Persona = new Persona ("","","");
+  public loading: boolean;
   homee:Home []=[];
   islogged = false;
-  constructor(public homeService: HomeService, private route: Router,private tokenService: TokenService) {}
+  constructor(public homeService: HomeService, private route: Router,private tokenService: TokenService) {
+    this.loading = true;
+  }
 
   ngOnInit(): void {
     this.homeService.getHome().subscribe(data => {this.homee = data;
@@ -27,6 +30,8 @@ export class BannerComponent implements OnInit {
     }else {
       this.islogged = false;
     }
+    this.loading = false;
+  
   }
   onLogOut(): void {
     this.tokenService.logOut();

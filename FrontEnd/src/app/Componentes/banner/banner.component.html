@@ -6,8 +6,10 @@
       >
         <i class="fa fa-id-badge" aria-hidden="true"></i>
       </button> -->
-
-<div class="container1">
+<div class="loading" *ngIf="loading">
+  <img src="/src/assets/imagenes/loader.gif">
+</div>
+<div class="container1" *ngIf="homee">
   <div class="row">
     <div class="col-12">
       <br><br>

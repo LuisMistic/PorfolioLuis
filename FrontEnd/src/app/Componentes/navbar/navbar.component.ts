@@ -8,7 +8,7 @@ import { TokenService } from 'src/app/Servicios/token.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  
   islogged = false;
   constructor(private router:Router, private tokenService: TokenService) { 
    
