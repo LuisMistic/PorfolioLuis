@@ -29,8 +29,9 @@ export class BannerComponent implements OnInit {
       this.islogged = true;
     }else {
       this.islogged = false;
+      this.loading = false;
     }
-    this.loading = false;
+    
   
   }
   onLogOut(): void {
